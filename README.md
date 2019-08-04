@@ -20,4 +20,6 @@ Also to help me formulate better presentations.  We will see how it goes!
     *  import relational_lsplines to access the code.
     
 * Second, pull this repo.  It will contain demos and samples using pieces of my code installed above.
+    *  The idea is to break out your interpreter and have fun!
+    *  Isn't that always the idea??
   

@@ -26,7 +26,7 @@ ia = rsp.ia #interval analysis
 
 N=2
 
-#
+# of_scalars=True     : means you intend to use this number in a vector of real numbers (False is default)
 xf = ad( 2., name = 'x', N=2, dim=0, of_scalars=True)
 
 
@@ -38,7 +38,9 @@ xf = ad( 2., name = 'x', N=2, dim=0, of_scalars=True)
 x0grad = adObjectMaker.makeGradient(N,i=0)
 x0hess = adObjectMaker.makeHessian(N)
 
+# of_scalars=False    : means you intend to use this ad number in a vector of interval numbers (False is default)
 xi = ad( 2., 
         grad = x0grad, 
         hess = x0hess,
-        name = 'x', N=2, dim=0)
+        name = 'x', N=2, dim=0,
+        of_scalars=False )

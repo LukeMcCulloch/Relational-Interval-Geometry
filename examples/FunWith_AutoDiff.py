@@ -48,13 +48,4 @@ print test.hess
 
 ##
 ##*****************************************
-## switch to intervals 
-x0grad = adObjectMaker.makeGradient(num_in_vec,i=0)
-x0hess = adObjectMaker.makeHessian(num_in_vec)
-
-# of_scalars=False    : means you intend to use this ad number in a vector of interval numbers (False is default)
-xi = ad( 2., 
-        grad = x0grad, 
-        hess = x0hess,
-        name = 'x', N=2, dim=0,
-        of_scalars=False )
+## 

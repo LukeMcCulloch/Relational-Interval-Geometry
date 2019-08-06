@@ -30,9 +30,9 @@ automatic_differentiation = rsp.automatic_differentiation # just what it sounds 
 
 adObjectMaker = automatic_differentiation.adObjectMaker
 
-ad = automatic_differentiation.ad #
+ad = automatic_differentiation.ad                   #automatic differentiation class
 
-ia = rsp.ia #interval analysis
+ia = rsp.ia                                         #interval analysis class
 
 
 num_in_vec = 2
@@ -43,12 +43,10 @@ num_in_vec = 2
 ## Make some AD (auto differentiation) numbers
 
 # of_scalars=True     : means you intend to use this number in a vector of real numbers (False is default)
-x0 = ad( 2., name = 'x', 
-        N=num_in_vec, dim=0, of_scalars=True)
-y1 = ad( 2., name = 'x', 
-        N=num_in_vec, dim=1, of_scalars=True)
+x0 = ad( 2., N=num_in_vec, dim=0, of_scalars=True)
+x1 = ad( 2., N=num_in_vec, dim=1, of_scalars=True)
 
-test = xf + yf**2
+test = x0 + x1**2
 
 print '\ntest value'
 print test.value
@@ -66,8 +64,8 @@ print test.hess
 ##
 ## do things by hand to show that it works..
 
+dimensions = 2
 order = 4
-num_in_vec = 7
 
 vertices=np.asarray([[0.,0.],
                      [2.,0.],
@@ -77,15 +75,17 @@ vertices=np.asarray([[0.,0.],
                      [11.,12.],
                      [12.,12.]])
 
+num_in_vec = len(vertices)
+
 xpts = []
 ypts = []
 for i in range(num_in_vec):
     xpti = vertices[i,0]
     ypti = vertices[i,0]
-    xpts.append( ad( xpti, name = 'x'+str(i), 
-        N=num_in_vec, dim=0, of_scalars=True) )
-    ypts.append( ad( xpti, name = 'x'+str(i), 
-        N=num_in_vec, dim=0, of_scalars=True) )
+    xpts.append( ad( xpti, N=num_in_vec*dimensions, 
+                    dim=i, of_scalars=True) )
+    ypts.append( ad( ypti, N=num_in_vec*dimensions, 
+                    dim=i+num_in_vec, of_scalars=True) )
     
 curve1 = curve.Bspline(vertices,order)
 curve1.plotcurve_detailed()

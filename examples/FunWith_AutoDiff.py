@@ -7,8 +7,8 @@ Created on Sun Aug  4 15:06:27 2019
 """
 
 import numpy as np #linear algebra
-np.set_printoptions(precision=10)
-np.set_printoptions(threshold=3)
+np.set_printoptions(precision=3)
+#np.set_printoptions(threshold=3)
 
 # import my feasible form parameter design PhD code-dump/library
 import relational_lsplines as rsp

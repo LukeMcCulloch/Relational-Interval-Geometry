@@ -13242,11 +13242,19 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Constraint-Programming-and-Automatic-Differentiation-for-Engineering-Design">Constraint Programming and Automatic Differentiation for Engineering Design<a class="anchor-link" href="#Constraint-Programming-and-Automatic-Differentiation-for-Engineering-Design">&#182;</a></h1><hr>
+<h3 id="Luke-McCulloch,-PhD">Luke McCulloch, PhD<a class="anchor-link" href="#Luke-McCulloch,-PhD">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Automation">Automation<a class="anchor-link" href="#Automation">&#182;</a></h2><ul>
-<li>In which I pick a problem to automate and tell you a little about it</li>
+<li>Here I pick a problem to automate and tell you a little about it</li>
 </ul>
 <h2 id="Automated-Design">Automated Design<a class="anchor-link" href="#Automated-Design">&#182;</a></h2><ul>
-<li>As functional minimization (extrema finding) sets the stage</li>
+<li>Functional minimization (extrema finding) sets the stage for what's to come</li>
 </ul>
 
 </div>
@@ -13257,12 +13265,15 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Automatic-Differentiation">Automatic Differentiation<a class="anchor-link" href="#Automatic-Differentiation">&#182;</a></h2><ul>
 <li>Programming without (as much) <em>programming</em></li>
+<li>Gradient decent without gradient coding</li>
 </ul>
 <h2 id="Interval-constraint-programming">Interval constraint programming<a class="anchor-link" href="#Interval-constraint-programming">&#182;</a></h2><ul>
 <li>Design without (as much) <em>search</em></li>
+<li>Because we eliminate infeasible designs</li>
 </ul>
 <h2 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h2><ul>
 <li>If your going to solve a problem, eventually you have to... solve a problem.</li>
+<li>I picked an easy one so I'd have results (and graduate)</li>
 </ul>
 
 </div>
@@ -13271,9 +13282,9 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pick a Problem, automate the generation of this kind of thing:</p>
+<p>A picked problem:  automate the generation of this kind of thing:</p>
 <p><img src="fig/RapidHull.png" alt="title"></p>
-<p>(NURBS hullform in demo in Rhino, human created)</p>
+<p>(NURBS early stage hullform (OSV type) in demo in Rhino, human created)</p>
 
 </div>
 </div>
@@ -13290,18 +13301,88 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-$$ 
+<ul>
+<li>One of a kind designs</li>
+<li>Less standardization than other industries</li>
+<li>No prototypes, less chance to iron out issues</li>
+</ul>
+<p><img src="fig/DesignChallenges.png" alt="title"></p>
+<h1 id="Use-Computation-to-Reduce-Uncertainty">Use Computation to Reduce Uncertainty<a class="anchor-link" href="#Use-Computation-to-Reduce-Uncertainty">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="fig/TradDesignVsOptimization.png" alt="title"></p>
+<h1 id="Automate-Design-Exploration">Automate Design Exploration<a class="anchor-link" href="#Automate-Design-Exploration">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="In-Ship-Design-Automation,">In Ship Design Automation,<a class="anchor-link" href="#In-Ship-Design-Automation,">&#182;</a></h2><h2 id="geometry-generation-has-been-a-major-bottleneck">geometry generation has been a major bottleneck<a class="anchor-link" href="#geometry-generation-has-been-a-major-bottleneck">&#182;</a></h2><ul>
+<li>Physics solvers are "mature" (enough I guess)</li>
+<li>we are <em>getting</em> <em>better</em> at meshing (not great yet)</li>
+<li>we generate designs by the engineer-week (month? $$$)</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Form-Parameter-Design">Form Parameter Design<a class="anchor-link" href="#Form-Parameter-Design">&#182;</a></h2><ul>
+<li>State of the art for early stage ship design</li>
+<li>Works by constrained optimization, minimizing some energy fuctional with constraints.</li>
+</ul>
+<h3 id="It-turns-design-into-a-functional-to-be-minimized.">It turns design into a functional to be minimized.<a class="anchor-link" href="#It-turns-design-into-a-functional-to-be-minimized.">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2>$$ 
 \begin{align*}
 \nabla &amp;: \text{Displacement} \\
-\text{L}_{\text{WL}} &amp;: \text{waterline length} \\
+L_{\text{WL}} &amp;: \text{waterline length} \\
+B &amp;: \text{beam} \\
+D &amp;: \text{depth} \\
+etc  ...
 \end{align*}
-$$
+$$<h3 id="Basic-sizing,-dimensions,-and-...">Basic sizing, dimensions, and ...<a class="anchor-link" href="#Basic-sizing,-dimensions,-and-...">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2><p><img src="fig/HullProperties/DifferentialProperties.png" alt="title"></p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2><p><img src="fig/HullProperties/SAC.png" alt="title"></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
 </div>
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="prompt input_prompt">In&nbsp;[177]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">relational_lsplines</span> <span class="kn">as</span> <span class="nn">rsp</span> <span class="c1">#my stuff</span>
@@ -13316,7 +13397,7 @@ $$
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">curve</span> <span class="o">=</span> <span class="n">rsp</span><span class="o">.</span><span class="n">curve</span> <span class="c1">#Bspline curve and surface module</span>
@@ -13337,7 +13418,7 @@ $$
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="prompt input_prompt">In&nbsp;[180]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># problem space size</span>
@@ -13354,7 +13435,7 @@ $$
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[181]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span> <span class="mf">2.</span><span class="p">,</span> 
@@ -13408,7 +13489,7 @@ with sizes denoted by the problem space.</p>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="prompt input_prompt">In&nbsp;[182]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span> <span class="mf">2.</span><span class="p">,</span> 
@@ -13453,7 +13534,7 @@ x1.hess  =
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="prompt input_prompt">In&nbsp;[183]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
@@ -13513,7 +13594,9 @@ test hessian
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(Interval)-Constraint-Programming">(Interval) Constraint Programming<a class="anchor-link" href="#(Interval)-Constraint-Programming">&#182;</a></h2><p>"A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."  - Antoine de Saint-Exupéry</p>
+<h2 id="(Interval)-Constraint-Programming">(Interval) Constraint Programming<a class="anchor-link" href="#(Interval)-Constraint-Programming">&#182;</a></h2><blockquote><p>A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away.</p>
+</blockquote>
+<p>-Antoine de Saint-Exupéry</p>
 
 </div>
 </div>
@@ -13530,6 +13613,15 @@ I didn't have time to clean it up after.</p>
 </div>
 </div>
 </aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>With a section curve, one constraint is that the area of the section should fit in a box:
+<img src="fig/midship_section.png" alt="title"></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>

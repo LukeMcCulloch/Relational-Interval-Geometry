@@ -44,9 +44,20 @@ num_in_vec = 2
 ##*****************************************
 ## Make some AD (auto differentiation) numbers
 
+identity = np.identity(num_in_vec)
+nullmatrix = np.zeros((num_in_vec,num_in_vec),float)
+
 # of_scalars=True     : means you intend to use this number in a vector of real numbers (False is default)
-x0 = ad( 2., N=num_in_vec, dim=0, of_scalars=True)
-x1 = ad( 2., N=num_in_vec, dim=1, of_scalars=True)
+#x0 = ad( 2., N=num_in_vec, dim=0, of_scalars=True)
+#x1 = ad( 2., N=num_in_vec, dim=1, of_scalars=True)
+
+x0 = ad( 2., grad = identity[0], hess = nullmatrix, N=num_in_vec, dim=0, of_scalars=True)
+x1 = ad( 2., grad = identity[1], hess = nullmatrix, N=num_in_vec, dim=1, of_scalars=True)
+print x0.grad
+print x0.hess
+print x1.grad
+print x1.hess
+
 
 test = x0 + x1**2
 

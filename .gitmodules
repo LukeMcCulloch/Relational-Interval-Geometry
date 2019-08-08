@@ -1,0 +1,6 @@
+[submodule "reveal.js"]
+	path = reveal.js
+	url = https://github.com/hakimel/reveal.js.git
+[submodule "jupyter/reveal.js"]
+	path = jupyter/reveal.js
+	url = https://github.com/hakimel/reveal.js.git

@@ -13359,51 +13359,109 @@ B &amp;: \text{beam} \\
 D &amp;: \text{depth} \\
 etc  ...
 \end{align*}
-$$<h3 id="Basic-sizing,-dimensions,-and-...">Basic sizing, dimensions, and ...<a class="anchor-link" href="#Basic-sizing,-dimensions,-and-...">&#182;</a></h3>
+$$<p><img src="fig/Rules/Cb.png" alt="title"></p>
+<h3 id="Basic-sizing,-dimensions,-and-...">Basic sizing, dimensions, and ...<a class="anchor-link" href="#Basic-sizing,-dimensions,-and-...">&#182;</a></h3>
 </div>
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="fig/HullProperties/DifferentialProperties.png" alt="title">
-<img src="fig/HullProperties/SAC.png" alt="title"></p>
+<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2><p><img src="fig/HullProperties/DifferentialProperties.png" alt="title"></p>
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="fig/HullProperties/ManualDeformDerivativeIssue.png" alt="title"></p>
+<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2><p><img src="fig/midship_inplace.png" alt="title"></p>
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2><p><img src="fig/HullProperties/MidshipCoeff.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2><p><img src="fig/HullProperties/SAC.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-kinds-of-properties-do-we-care-about?">What kinds of properties do we care about?<a class="anchor-link" href="#What-kinds-of-properties-do-we-care-about?">&#182;</a></h2><p><img src="fig/HullProperties/ManualDeformDerivativeIssue.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hull-Design-Control:-Form-Parameter-Design">Hull Design Control: Form Parameter Design<a class="anchor-link" href="#Hull-Design-Control:-Form-Parameter-Design">&#182;</a></h2><p><img src="fig/FPD/FPDsummary.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-do-we-Make-a-B-spline-curve-which-conforms-to-constraints?">How do we Make a B-spline curve which conforms to constraints?<a class="anchor-link" href="#How-do-we-Make-a-B-spline-curve-which-conforms-to-constraints?">&#182;</a></h2><p><img src="fig/FPD/cagd15curvedefBig.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Find a two dimensional open B-spline curve</p>
+\begin{equation}
+\underline{q}(t)\;=\;\sum_{i=0}^{n}\underline{V}_{i}N_{i,k}(t) 
+\label{eq:optproblem}
+\end{equation}<p>such that a flexible set of selected form parameters 
+is met and, in addition, the curve is considered "good" 
+in terms of a problem-oriented measure.</p>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Find a B-spline curve of given order $k$, number of vertices $n+1$, and specified knot 
+vector $\underline{T}$</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Problem:</p>
+$$
+F = f + \sum_{j \in \left[ \forall h \right]}  \lambda_j h_j    
+$$$$F = F\left(\underline{V},\underline{\lambda}\right)$$<p>Solution:</p>
+$$\underline{\nabla} F = [0,0,0,0.... ]^T$$<p>Find control vertices and Lagrange multipliers such that 
+the gradient of $F$ is $\underline{0}$</p>
+<p>Solve via Newton's method.</p>
 
 </div>
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[201]:</div>
+<div class="prompt input_prompt">In&nbsp;[299]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">relational_lsplines</span> <span class="kn">as</span> <span class="nn">rsp</span> <span class="c1">#my stuff</span>
@@ -13418,7 +13476,7 @@ $$<h3 id="Basic-sizing,-dimensions,-and-...">Basic sizing, dimensions, and ...<a
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[203]:</div>
+<div class="prompt input_prompt">In&nbsp;[301]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">curve</span> <span class="o">=</span> <span class="n">rsp</span><span class="o">.</span><span class="n">curve</span> <span class="c1">#Bspline curve and surface module</span>
@@ -13439,7 +13497,7 @@ $$<h3 id="Basic-sizing,-dimensions,-and-...">Basic sizing, dimensions, and ...<a
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="prompt input_prompt">In&nbsp;[302]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># problem space size</span>
@@ -13456,7 +13514,7 @@ $$<h3 id="Basic-sizing,-dimensions,-and-...">Basic sizing, dimensions, and ...<a
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[205]:</div>
+<div class="prompt input_prompt">In&nbsp;[303]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span> <span class="mf">2.</span><span class="p">,</span> 
@@ -13510,7 +13568,7 @@ with sizes denoted by the problem space.</p>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[206]:</div>
+<div class="prompt input_prompt">In&nbsp;[304]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span> <span class="mf">2.</span><span class="p">,</span> 
@@ -13555,7 +13613,7 @@ x1.hess  =
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[207]:</div>
+<div class="prompt input_prompt">In&nbsp;[305]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>

@@ -13543,7 +13543,7 @@ the gradient of $F$ is zero. (Then check your solution)</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[391]:</div>
+<div class="prompt input_prompt">In&nbsp;[415]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># for the gradient</span>
@@ -13570,7 +13570,7 @@ the gradient of $F$ is zero. (Then check your solution)</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[392]:</div>
+<div class="prompt input_prompt">In&nbsp;[416]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> 
@@ -13598,7 +13598,7 @@ the gradient of $F$ is zero. (Then check your solution)</p>
 </aside>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[393]:</div>
+<div class="prompt input_prompt">In&nbsp;[417]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;x0.value = &#39;</span><span class="p">,</span><span class="n">x0</span><span class="o">.</span><span class="n">value</span>
@@ -13644,7 +13644,7 @@ x0.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[394]:</div>
+<div class="prompt input_prompt">In&nbsp;[418]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> 
@@ -13704,7 +13704,7 @@ x1.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[395]:</div>
+<div class="prompt input_prompt">In&nbsp;[419]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
@@ -13774,7 +13774,7 @@ test hessian
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[397]:</div>
+<div class="prompt input_prompt">In&nbsp;[421]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">dimensions</span> <span class="o">=</span> <span class="mi">2</span>   <span class="c1"># 2D curve example</span>
@@ -13798,13 +13798,13 @@ test hessian
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[397]:</div>
+    <div class="prompt output_prompt">Out[421]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8724714610&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f872649c790&gt;</pre>
 </div>
 
 </div>
@@ -13845,7 +13845,7 @@ the bending energy in the curve when $N=2$.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[398]:</div>
+<div class="prompt input_prompt">In&nbsp;[422]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">precompute_curve_integrals</span><span class="p">()</span>
@@ -13887,7 +13887,7 @@ curve1.E2 = 7210.666666666669
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[399]:</div>
+<div class="prompt input_prompt">In&nbsp;[423]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
@@ -13948,7 +13948,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[400]:</div>
+<div class="prompt input_prompt">In&nbsp;[424]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">fairness</span><span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">vertices</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -13994,7 +13994,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[401]:</div>
+<div class="prompt input_prompt">In&nbsp;[425]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#call our new function with AD xpts and ypts:</span>
@@ -14074,7 +14074,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[403]:</div>
+<div class="prompt input_prompt">In&nbsp;[427]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># create a dictionary to hold components of our Functional F:</span>
@@ -14111,7 +14111,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[404]:</div>
+<div class="prompt input_prompt">In&nbsp;[428]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#setup and solve:</span>
@@ -14132,13 +14132,13 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[404]:</div>
+    <div class="prompt output_prompt">Out[428]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f87263a0350&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8724bcadd0&gt;</pre>
 </div>
 
 </div>
@@ -14341,7 +14341,7 @@ $$<ul>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[406]:</div>
+<div class="prompt input_prompt">In&nbsp;[430]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">ia</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">2.</span><span class="p">)</span>
@@ -14464,7 +14464,7 @@ $$</p>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[407]:</div>
+<div class="prompt input_prompt">In&nbsp;[431]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">fragment</span><span class="o">=</span> \
@@ -14532,7 +14532,7 @@ And across them.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[408]:</div>
+<div class="prompt input_prompt">In&nbsp;[432]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;Make some design space variables:</span>
@@ -14561,7 +14561,7 @@ And across them.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[409]:</div>
+<div class="prompt input_prompt">In&nbsp;[433]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">vol</span> <span class="o">=</span> <span class="n">vol</span> <span class="o">==</span> <span class="n">ia</span><span class="p">(</span><span class="mf">50000.</span><span class="p">,</span><span class="mf">100000.</span><span class="p">)</span>
@@ -14584,7 +14584,7 @@ And across them.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[410]:</div>
+<div class="prompt input_prompt">In&nbsp;[434]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;-----------------------------------------------</span>
@@ -14610,12 +14610,12 @@ And across them.</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&#39;Cb&#39;==
-   &#39;v23&#39;/
+   &#39;v28&#39;/
       &#39;vol&#39;==
          &#39;ia(50000.0,100000.0)&#39; 
         
-      &#39;v22&#39;*
-         &#39;v21&#39;*
+      &#39;v27&#39;*
+         &#39;v26&#39;*
             &#39;lwl&#39; 
         
             &#39;bwl&#39;==
@@ -14740,6 +14740,14 @@ And across them.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="I-focused-on-making-it-easier-to-use.">I focused on making it easier to use.<a class="anchor-link" href="#I-focused-on-making-it-easier-to-use.">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Thank-you-for-your-attention!">Thank you for your attention!<a class="anchor-link" href="#Thank-you-for-your-attention!">&#182;</a></h1><p>Any questions?</p>
+
 </div>
 </div>
 </div>

@@ -13543,7 +13543,7 @@ the gradient of $F$ is zero. (Then check your solution)</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[269]:</div>
+<div class="prompt input_prompt">In&nbsp;[391]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># for the gradient</span>
@@ -13570,7 +13570,7 @@ the gradient of $F$ is zero. (Then check your solution)</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[270]:</div>
+<div class="prompt input_prompt">In&nbsp;[392]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> 
@@ -13598,7 +13598,7 @@ the gradient of $F$ is zero. (Then check your solution)</p>
 </aside>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[271]:</div>
+<div class="prompt input_prompt">In&nbsp;[393]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;x0.value = &#39;</span><span class="p">,</span><span class="n">x0</span><span class="o">.</span><span class="n">value</span>
@@ -13644,7 +13644,7 @@ x0.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[272]:</div>
+<div class="prompt input_prompt">In&nbsp;[394]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> 
@@ -13704,7 +13704,7 @@ x1.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[273]:</div>
+<div class="prompt input_prompt">In&nbsp;[395]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
@@ -13774,7 +13774,7 @@ test hessian
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[275]:</div>
+<div class="prompt input_prompt">In&nbsp;[397]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">dimensions</span> <span class="o">=</span> <span class="mi">2</span>   <span class="c1"># 2D curve example</span>
@@ -13798,13 +13798,13 @@ test hessian
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[275]:</div>
+    <div class="prompt output_prompt">Out[397]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8724b2b3d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8724714610&gt;</pre>
 </div>
 
 </div>
@@ -13845,7 +13845,7 @@ the bending energy in the curve when $N=2$.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[276]:</div>
+<div class="prompt input_prompt">In&nbsp;[398]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">precompute_curve_integrals</span><span class="p">()</span>
@@ -13887,7 +13887,7 @@ curve1.E2 = 7210.666666666669
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[277]:</div>
+<div class="prompt input_prompt">In&nbsp;[399]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
@@ -13948,7 +13948,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[278]:</div>
+<div class="prompt input_prompt">In&nbsp;[400]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">fairness</span><span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">vertices</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -13994,7 +13994,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[279]:</div>
+<div class="prompt input_prompt">In&nbsp;[401]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#call our new function with AD xpts and ypts:</span>
@@ -14074,7 +14074,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[281]:</div>
+<div class="prompt input_prompt">In&nbsp;[403]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># create a dictionary to hold components of our Functional F:</span>
@@ -14111,7 +14111,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[282]:</div>
+<div class="prompt input_prompt">In&nbsp;[404]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#setup and solve:</span>
@@ -14132,13 +14132,13 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[282]:</div>
+    <div class="prompt output_prompt">Out[404]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8725917e50&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f87263a0350&gt;</pre>
 </div>
 
 </div>
@@ -14334,14 +14334,14 @@ $$<ul>
 <li>Operations composed of intervals and
   bound the range of corresponding real operations, rigorously, using outward rounding, on real computer hardware.</li>
 </ul>
-<h3 id="Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">Note: update of old data by new data, always proceeds by taking the intersection.<a class="anchor-link" href="#Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">&#182;</a></h3><p>Without this, nothing interval constraint programming will not work.</p>
+<h3 id="Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">Note: update of old data by new data, always proceeds by taking the intersection.<a class="anchor-link" href="#Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">&#182;</a></h3><p>This is absolutely essential interval constraint and interval optimization, programming.</p>
 
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[284]:</div>
+<div class="prompt input_prompt">In&nbsp;[406]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">ia</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">2.</span><span class="p">)</span>
@@ -14456,18 +14456,61 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Is an algorithm for making two things equal.</p>
+<p>Is an algorithm for making two things equal.  (within an environment)</p>
 <p>Data can flow in either direction across the equals sign.</p>
 
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[407]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fragment</span><span class="o">=</span> \
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">def unify(self, a, b):</span>
+<span class="sd">    ivars = a,b # a and b are logical variables, now saved in ivars</span>
+<span class="sd">    a = self.value_of(a) # get the value of a </span>
+<span class="sd">    b = self.value_of(b) # get the value of b</span>
+<span class="sd">    #...</span>
+<span class="sd">    if isinstance(a, ia) and isinstance(b, ia):</span>
+<span class="sd">        values = copy.copy(self.values) # self.values is a dictionary mapping vars to values</span>
+<span class="sd">        # this is the &quot;environment&quot;</span>
+<span class="sd">        values[ivars[0]] = a &amp; b</span>
+<span class="sd">        values[ivars[1]] = values[ivars[0]] &amp; b</span>
+<span class="sd">    #...</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Issue:  unification always acts on 2 terms.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-do-we-make-logical-constraint-relations-work-for-any-mathmatical-statement?">How do we make logical constraint relations work for any mathmatical statement?<a class="anchor-link" href="#How-do-we-make-logical-constraint-relations-work-for-any-mathmatical-statement?">&#182;</a></h2>
 </div>
 </div>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Compile-mathmatical-expressions-into-syntax-trees">Compile mathmatical expressions into syntax trees<a class="anchor-link" href="#Compile-mathmatical-expressions-into-syntax-trees">&#182;</a></h2><p>Use operator overloading to build relational math terms.</p>
+<h2 id="Answer:--Compile-mathmatical-expressions-into-syntax-trees">Answer:  Compile mathmatical expressions into syntax trees<a class="anchor-link" href="#Answer:--Compile-mathmatical-expressions-into-syntax-trees">&#182;</a></h2><p>Use operator overloading to build relational math terms.</p>
 <ul>
-<li>This time, overloading handles parsing of n-ary 
+<li>Store the ternary elements of a computation</li>
+<li>And the operation used to combine two of them into the other</li>
+<li>Overloading handles parsing of n-ary 
 mathematical terms into ternary constraints.</li>
 <li>Then we methodically convert those 
 ternary constraints into
@@ -14483,6 +14526,125 @@ And across them.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Let's-look-at-an-example-design-space-and-see-what-a-rule-looks-like">Let's look at an example design space and see what a rule looks like<a class="anchor-link" href="#Let's-look-at-an-example-design-space-and-see-what-a-rule-looks-like">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[408]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;Make some design space variables:</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">lwl</span> <span class="o">=</span> <span class="n">lp</span><span class="o">.</span><span class="n">PStates</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;lwl&#39;</span><span class="p">)</span>
+<span class="n">bwl</span> <span class="o">=</span> <span class="n">lp</span><span class="o">.</span><span class="n">PStates</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;bwl&#39;</span><span class="p">)</span>
+<span class="n">draft</span> <span class="o">=</span> <span class="n">lp</span><span class="o">.</span><span class="n">PStates</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;draft&#39;</span><span class="p">)</span>
+<span class="n">vol</span> <span class="o">=</span> <span class="n">lp</span><span class="o">.</span><span class="n">PStates</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;vol&#39;</span><span class="p">)</span>
+<span class="n">disp</span> <span class="o">=</span> <span class="n">lp</span><span class="o">.</span><span class="n">PStates</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;disp&#39;</span><span class="p">)</span>
+
+<span class="n">Cb</span> <span class="o">=</span> <span class="n">lp</span><span class="o">.</span><span class="n">PStates</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Cb&#39;</span><span class="p">)</span>
+<span class="n">Cp</span> <span class="o">=</span> <span class="n">lp</span><span class="o">.</span><span class="n">PStates</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Cp&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="To-make-it-a-real-interval-desgin-space,">To make it a real interval desgin space,<a class="anchor-link" href="#To-make-it-a-real-interval-desgin-space,">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[409]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">vol</span> <span class="o">=</span> <span class="n">vol</span> <span class="o">==</span> <span class="n">ia</span><span class="p">(</span><span class="mf">50000.</span><span class="p">,</span><span class="mf">100000.</span><span class="p">)</span>
+<span class="n">bwl</span> <span class="o">=</span> <span class="n">bwl</span> <span class="o">==</span> <span class="n">ia</span><span class="p">(</span><span class="mf">25.</span><span class="p">,</span><span class="mf">30.</span><span class="p">)</span>
+
+<span class="c1">#etc</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Let's-see-what-a-rule-syntax-tree-looks-like">Let's see what a rule syntax tree looks like<a class="anchor-link" href="#Let's-see-what-a-rule-syntax-tree-looks-like">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[410]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;-----------------------------------------------</span>
+<span class="sd">#rule: block coefficient</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">Cb</span> <span class="o">=</span> <span class="n">Cb</span> <span class="o">==</span> <span class="n">vol</span><span class="o">/</span><span class="p">(</span><span class="n">lwl</span><span class="o">*</span><span class="n">bwl</span><span class="o">*</span><span class="n">draft</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">Cb</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#39;Cb&#39;==
+   &#39;v23&#39;/
+      &#39;vol&#39;==
+         &#39;ia(50000.0,100000.0)&#39; 
+        
+      &#39;v22&#39;*
+         &#39;v21&#39;*
+            &#39;lwl&#39; 
+        
+            &#39;bwl&#39;==
+               &#39;ia(25.0,30.0)&#39; 
+        
+         &#39;draft&#39; 
+        
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python automatically creates temporaries so that all operators act to combine two terms into a third.</p>
+<p>This let's us walk the tree in reverse to compile logical rules.</p>
+<p>We keep track of what terms are used in what rules.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Constraints-are-Compiled-Into-a-Graph:">Constraints are Compiled Into a Graph:<a class="anchor-link" href="#Constraints-are-Compiled-Into-a-Graph:">&#182;</a></h2><p><img src="fig/PrimaryConstraintGraph.png" alt="Drawing" style="width: 700px;"/></p>
 
 </div>
@@ -14491,8 +14653,16 @@ And across them.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="So-now,-when-one-term-updates-information-due-to-some-rule.">So now, when one term updates information due to some rule.<a class="anchor-link" href="#So-now,-when-one-term-updates-information-due-to-some-rule.">&#182;</a></h2><h3 id="Call-all-the-other-rules-that-term-is-used-in.">Call all the other rules that term is used in.<a class="anchor-link" href="#Call-all-the-other-rules-that-term-is-used-in.">&#182;</a></h3><h3 id="Other-terms-update-during-the-rule-processing-as-well.">Other terms update during the rule processing as well.<a class="anchor-link" href="#Other-terms-update-during-the-rule-processing-as-well.">&#182;</a></h3><h3 id="So-call-their-rules-too!">So call their rules too!<a class="anchor-link" href="#So-call-their-rules-too!">&#182;</a></h3><h3 id="Thanks-to-update-by-intersection,-termination-will-occur">Thanks to update by intersection, termination will occur<a class="anchor-link" href="#Thanks-to-update-by-intersection,-termination-will-occur">&#182;</a></h3><p>(it may even have gaurantees)</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>How do we get a single boat out of it?</p>
-<h2 id="At-random,-for-demo-purposes!">At random, for demo purposes!<a class="anchor-link" href="#At-random,-for-demo-purposes!">&#182;</a></h2>
+<h2 id="Select-numbers-at-random,-from-the-feasible-domain">Select numbers at random, from the feasible domain<a class="anchor-link" href="#Select-numbers-at-random,-from-the-feasible-domain">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">

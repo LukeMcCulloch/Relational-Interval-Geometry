@@ -13540,7 +13540,7 @@ the gradient of $F$ is zero.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[245]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># for the gradient</span>
@@ -13567,7 +13567,7 @@ the gradient of $F$ is zero.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[246]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> 
@@ -13595,7 +13595,7 @@ the gradient of $F$ is zero.</p>
 </aside>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[247]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;x0.value = &#39;</span><span class="p">,</span><span class="n">x0</span><span class="o">.</span><span class="n">value</span>
@@ -13641,7 +13641,7 @@ x0.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[248]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> 
@@ -13701,7 +13701,7 @@ x1.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[249]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
@@ -13771,7 +13771,7 @@ test hessian
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[251]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">dimensions</span> <span class="o">=</span> <span class="mi">2</span>   <span class="c1"># 2D curve example</span>
@@ -13795,13 +13795,13 @@ test hessian
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[85]:</div>
+    <div class="prompt output_prompt">Out[251]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f872586a690&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8724ec2d90&gt;</pre>
 </div>
 
 </div>
@@ -13842,7 +13842,7 @@ the bending energy in the curve when $N=2$.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[252]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">precompute_curve_integrals</span><span class="p">()</span>
@@ -13884,7 +13884,7 @@ curve1.E2 = 7210.666666666669
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[253]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
@@ -13945,7 +13945,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[254]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">fairness</span><span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">vertices</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -13991,7 +13991,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[255]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#call our new function with AD xpts and ypts:</span>
@@ -14071,21 +14071,27 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[257]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">FPD</span> <span class="o">=</span> <span class="n">FormParameterDict</span><span class="p">(</span><span class="n">curve1</span><span class="p">)</span> <span class="c1">#create a dictionary to hold components of our Functional F:</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># create a dictionary to hold components of our Functional F:</span>
+<span class="n">FPD</span> <span class="o">=</span> <span class="n">FormParameterDict</span><span class="p">(</span><span class="n">curve1</span><span class="p">)</span> 
 
 <span class="c1">#fairness functional, f:</span>
-<span class="n">FPD</span><span class="o">.</span><span class="n">add_E2</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;LS&#39;</span><span class="p">)</span> <span class="c1">#LS asks our library to minimize this quantity</span>
+<span class="n">FPD</span><span class="o">.</span><span class="n">add_E2</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;LS&#39;</span><span class="p">)</span> <span class="c1"># &quot;LS&quot; asks our library to minimize </span>
 
-<span class="c1">#equality constraints, h_j:</span>
+
+<span class="c1"># now the equality constraints:</span>
+<span class="c1">#</span>
 <span class="c1"># C1 (tangent) clamp at the ends:</span>
 <span class="n">FPD</span><span class="o">.</span><span class="n">add_AngleConstraint</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;equality&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span>
 <span class="n">FPD</span><span class="o">.</span><span class="n">add_AngleConstraint</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;equality&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span>
+<span class="c1">#</span>
 <span class="c1"># C2 curvature clamp at the ends</span>
 <span class="n">FPD</span><span class="o">.</span><span class="n">add_CurvatureConstraint</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;equality&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span>
 <span class="n">FPD</span><span class="o">.</span><span class="n">add_CurvatureConstraint</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;equality&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span>
+
+<span class="c1">#Setup done.</span>
 </pre></div>
 
     </div>
@@ -14102,7 +14108,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[258]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#setup and solve:</span>
@@ -14123,13 +14129,13 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[92]:</div>
+    <div class="prompt output_prompt">Out[258]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8726515450&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8724b9c090&gt;</pre>
 </div>
 
 </div>
@@ -14172,7 +14178,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14180,7 +14186,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14202,7 +14208,8 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Use-Natural-Naval-Archecture-Design-Relationships">Use Natural Naval Archecture Design Relationships<a class="anchor-link" href="#Use-Natural-Naval-Archecture-Design-Relationships">&#182;</a></h2><h3 id="simple-rules-like...">simple rules like...<a class="anchor-link" href="#simple-rules-like...">&#182;</a></h3><p>Block Coefficient
+<p>How to determine what to take away?</p>
+<h3 id="Use-Natural-Naval-Archecture-Design-Relationships...">Use Natural Naval Archecture Design Relationships...<a class="anchor-link" href="#Use-Natural-Naval-Archecture-Design-Relationships...">&#182;</a></h3><p>Block Coefficient
 $$
 \text{C}_{\text{B}} = \frac{\nabla}{\text{L}_{\text{WL}} \times \text{B}    \times \text{D}}
 $$
@@ -14214,6 +14221,7 @@ Prismatic Coefficient
 $$
 \text{C}_{\text{P}} = \frac{\nabla}{\text{L}_{\text{WL}} \times \text{B} \times D \times \text{C}_{\text{M}}}= \frac{\text{C}_{\text{B}}}{\text{C}_{\text{M}} }
 $$</p>
+<p>And many others.  In fact this framework you can invent your own.</p>
 
 </div>
 </div>
@@ -14237,7 +14245,7 @@ $$</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14266,8 +14274,13 @@ $$<p>(in general on the order of 20-30 parameters and design ratios)</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>With a section curve, one constraint is that the area of the section should fit in a box:</p>
-<p><img src="fig/midship_section.png" alt="Drawing" style="width: 400px;"/></p>
+<p>Find a form parameter, <em>interval</em> valued, thin, 
+    $\textit{ design space}$, $\text{S}$</p>
+\begin{equation}
+\S_{j}=[\underline{S_{j}},\overline{S_{j}}]
+\end{equation}<p>such that all constraints and relations 
+are feasible,  and the form  parameter design 
+program  returns a valid hull  geometry.</p>
 
 </div>
 </div>
@@ -14275,6 +14288,50 @@ $$<p>(in general on the order of 20-30 parameters and design ratios)</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-am-I-talking-about?">What am I talking about?<a class="anchor-link" href="#What-am-I-talking-about?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2-Philosophical-Choices:">2 Philosophical Choices:<a class="anchor-link" href="#2-Philosophical-Choices:">&#182;</a></h2><ul>
+<li>From single design to operating on the <em>entire</em> design space at once<ul>
+<li>via <em>Interval arithmetic</em>  (that surely needs explaining)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>How to solve this system of rules (interval equations)<ul>
+<li>Matrix of linear equations?</li>
+<li>Local consistencies?  (constraint programming)</li>
+</ul>
+</li>
+</ul>
+<p>We choose local consistencies for the technical reason that matrix interval methods often need local consistencies anyway.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Interval-Arithmetic,-briefly-considered.">Interval Arithmetic, briefly considered.<a class="anchor-link" href="#Interval-Arithmetic,-briefly-considered.">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Interval-Arithmetic,-in-one-slide">Interval Arithmetic, in one slide<a class="anchor-link" href="#Interval-Arithmetic,-in-one-slide">&#182;</a></h1>$$
+\left(1.,2.\right) +\left(0.,5.\right) = \left( 1., 7. \right)
+$$<ul>
+<li>It's based on closed intervals of real numbers.</li>
+<li>e.g. $\left(1.,2.\right)$ defines a continuum from $1.$ to $2.$ inclusive.</li>
+<li>Operations composed of intervals and
+  bound the range of corresponding real operations, rigorously, using outward rounding, on real computer hardware.</li>
+</ul>
+<h3 id="Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">Note: update of old data by new data, always proceeds by taking the intersection.<a class="anchor-link" href="#Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">&#182;</a></h3><p>Without this, nothing will work.</p>
 
 </div>
 </div>
@@ -14282,10 +14339,210 @@ $$<p>(in general on the order of 20-30 parameters and design ratios)</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>How do we use an interval valued rule to eliminate infeasible designs?</p>
 
 </div>
 </div>
-</div></section></section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Interval-Constraint-programming.">Interval Constraint programming.<a class="anchor-link" href="#Interval-Constraint-programming.">&#182;</a></h1>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Forward-Backward-Constraint-Propagation">Forward Backward Constraint Propagation<a class="anchor-link" href="#Forward-Backward-Constraint-Propagation">&#182;</a></h2><p>Let's show how a forward backward algorithm works
+using a simple mathematical expression:
+$$
+\left(x_{1} + x_{2}\right) \times x_{3} \in \left[1.,2.\right]
+$$</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Build-the-syntax-tree">Build the syntax tree<a class="anchor-link" href="#Build-the-syntax-tree">&#182;</a></h2><p><img src="fig/syntax_tree.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Forward-Backward-Contractor,-Intermediate-Terms:">Forward Backward Contractor, Intermediate Terms:<a class="anchor-link" href="#Forward-Backward-Contractor,-Intermediate-Terms:">&#182;</a></h2><p><img src="fig/Intermediate_terms.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Forward-Backward-Contractor,-Forward-Pass:">Forward Backward Contractor, Forward Pass:<a class="anchor-link" href="#Forward-Backward-Contractor,-Forward-Pass:">&#182;</a></h2><p><img src="fig/fwd_pass.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Forward-Backward-Contractor,-Backward-Pass:">Forward Backward Contractor, Backward Pass:<a class="anchor-link" href="#Forward-Backward-Contractor,-Backward-Pass:">&#182;</a></h2><p><img src="fig/bwd_pass.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How do we make it work for arbitrary systems of rules?</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Unification">Unification<a class="anchor-link" href="#Unification">&#182;</a></h2>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Is an algorithm for making two things equal.</p>
+<p>Data can flow in either direction across the equals sign.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Compile-mathmatical-expressions-into-syntax-trees">Compile mathmatical expressions into syntax trees<a class="anchor-link" href="#Compile-mathmatical-expressions-into-syntax-trees">&#182;</a></h2><p>Use operator overloading to build relational math terms.</p>
+<ul>
+<li>This time, overloading handles parsing of n-ary 
+mathematical terms into ternary constraints.</li>
+<li>Then we methodically convert those 
+ternary constraints into
+binary logical rules perform unification on them.</li>
+</ul>
+<p>Data can then flow freely through our constraints.
+And across them.</p>
+<p>This is constraint logic programming.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Constraints-are-Compiled-Into-a-Graph:">Constraints are Compiled Into a Graph:<a class="anchor-link" href="#Constraints-are-Compiled-Into-a-Graph:">&#182;</a></h2><p><img src="fig/PrimaryConstraintGraph.png" alt="Drawing" style="width: 700px;"/></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How do we get a single boat out of it?</p>
+<h2 id="At-random,-for-demo-purposes!">At random, for demo purposes!<a class="anchor-link" href="#At-random,-for-demo-purposes!">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Iterate over the design space one variable at a time</li>
+<li>Pick a number from the feasible domain at random</li>
+<li>Use constraint propagation to update all the other design variables with the new data.</li>
+<li>Once a single design is determined, do form parameter design.</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Resultant-hull-constraint-combinations-were-always-feasible">Resultant hull constraint combinations were always feasible<a class="anchor-link" href="#Resultant-hull-constraint-combinations-were-always-feasible">&#182;</a></h2><p><img src="fig/Cb_def.png" alt="Drawing" style="width: 700px;"/></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This made it easy to have form parameter design solve for a decent looking hull</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Resulting-solved-curve-form-parameters-had-little-error">Resulting solved curve form parameters had little error<a class="anchor-link" href="#Resulting-solved-curve-form-parameters-had-little-error">&#182;</a></h2><p><img src="fig/results1.png" alt="Drawing" style="width: 700px;"/></p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>However, by the time the surface is generated, the fit is no longer prefect
+(future work!)</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Details:--I-used-spatial-splitting-(and-THB-splines)-for-fine-grained-form-paremter-design">Details:  I used spatial splitting (and THB-splines) for fine grained form paremter design<a class="anchor-link" href="#Details:--I-used-spatial-splitting-(and-THB-splines)-for-fine-grained-form-paremter-design">&#182;</a></h2><p><img src="fig/OSVMultiSurfColor.png" alt="Drawing" style="width: 700px;"/></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Details:--Together-with-Auto-Diff,-this-allowed-much-freedom-to-sculpt-interfaces-between-surface">Details:  Together with Auto Diff, this allowed much freedom to sculpt interfaces between surface<a class="anchor-link" href="#Details:--Together-with-Auto-Diff,-this-allowed-much-freedom-to-sculpt-interfaces-between-surface">&#182;</a></h2><p><img src="fig/FFCinfluence1.png" alt="Drawing" style="width: 700px;"/></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But I am not using form parameter design to it's fullest.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="I-focused-on-making-it-easier-to-use.">I focused on making it easier to use.<a class="anchor-link" href="#I-focused-on-making-it-easier-to-use.">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div></section></section>
 </div>
 </div>
 

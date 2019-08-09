@@ -13252,7 +13252,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><h2 id="Automation">Automation<a class="anchor-link" href="#Automation">&#182;</a></h2><ul>
-<li>Here I pick a problem to automate and tell you a little about it</li>
+<li>Here I pick a problem to automate and tell you a little about it </li>
 </ul>
 <h2 id="Design">Design<a class="anchor-link" href="#Design">&#182;</a></h2><ul>
 <li>Functional minimization (extrema finding) sets the stage for what's to come</li>
@@ -13458,7 +13458,7 @@ $$<p><img src="fig/Rules/Cb.png" alt="title"></p>
 \end{equation}<p>such that a flexible set of selected form parameters, $\underline{h}$ 
 is met and, in addition, the curve is considered "good" 
 in terms of a problem-oriented measure, $f$.</p>
-<p>$\underline{V}_{i}$ are the control vertices
+<p>$\underline{V}_{i}$ are the control vertices.  These are the free variables in our design.
 <br>
 $N_{i,k}$ are the basis functions
 <br>
@@ -13492,12 +13492,15 @@ F = f + \sum_{j \in \left[ \forall h \right]}  \lambda_j h_j
 $$$$
 f = f\left(\underline{V}\right) \\
 h_j = h_j\left(\underline{V}\right) \\
-$$<p>$
-\lambda_j$ are Lagrange multipliers</p>
+$$<p>$f$ is a fairness functional to be minimized
+<br>
+$h$ are constraints to be satisfied
+<br>
+$\lambda_j$ are Lagrange multipliers</p>
 <p>Solve via Newton's method.  (We want geometry that minimizes $F$)</p>
-<p>Solution:</p>
-$$\underline{\nabla} F = [0,0,0,0.... ]^T$$<p>Find control vertices and Lagrange multipliers such that 
-the gradient of $F$ is zero.</p>
+<p>Solution: $\underline{\nabla} F = [0,0,0,0.... ]^T$</p>
+<p>Basically find control vertices and Lagrange multipliers such that 
+the gradient of $F$ is zero. (Then check your solution)</p>
 
 </div>
 </div>
@@ -13540,7 +13543,7 @@ the gradient of $F$ is zero.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[245]:</div>
+<div class="prompt input_prompt">In&nbsp;[269]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># for the gradient</span>
@@ -13567,7 +13570,7 @@ the gradient of $F$ is zero.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[246]:</div>
+<div class="prompt input_prompt">In&nbsp;[270]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> 
@@ -13595,7 +13598,7 @@ the gradient of $F$ is zero.</p>
 </aside>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[247]:</div>
+<div class="prompt input_prompt">In&nbsp;[271]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;x0.value = &#39;</span><span class="p">,</span><span class="n">x0</span><span class="o">.</span><span class="n">value</span>
@@ -13641,7 +13644,7 @@ x0.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[248]:</div>
+<div class="prompt input_prompt">In&nbsp;[272]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> 
@@ -13701,7 +13704,7 @@ x1.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[249]:</div>
+<div class="prompt input_prompt">In&nbsp;[273]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
@@ -13771,7 +13774,7 @@ test hessian
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[251]:</div>
+<div class="prompt input_prompt">In&nbsp;[275]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">dimensions</span> <span class="o">=</span> <span class="mi">2</span>   <span class="c1"># 2D curve example</span>
@@ -13795,13 +13798,13 @@ test hessian
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[251]:</div>
+    <div class="prompt output_prompt">Out[275]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8724ec2d90&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8724b2b3d0&gt;</pre>
 </div>
 
 </div>
@@ -13842,7 +13845,7 @@ the bending energy in the curve when $N=2$.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[252]:</div>
+<div class="prompt input_prompt">In&nbsp;[276]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">precompute_curve_integrals</span><span class="p">()</span>
@@ -13884,7 +13887,7 @@ curve1.E2 = 7210.666666666669
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[253]:</div>
+<div class="prompt input_prompt">In&nbsp;[277]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
@@ -13945,7 +13948,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[254]:</div>
+<div class="prompt input_prompt">In&nbsp;[278]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">fairness</span><span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">vertices</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -13991,7 +13994,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[255]:</div>
+<div class="prompt input_prompt">In&nbsp;[279]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#call our new function with AD xpts and ypts:</span>
@@ -14071,7 +14074,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[257]:</div>
+<div class="prompt input_prompt">In&nbsp;[281]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># create a dictionary to hold components of our Functional F:</span>
@@ -14108,7 +14111,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[258]:</div>
+<div class="prompt input_prompt">In&nbsp;[282]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#setup and solve:</span>
@@ -14129,13 +14132,13 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[258]:</div>
+    <div class="prompt output_prompt">Out[282]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8724b9c090&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8725917e50&gt;</pre>
 </div>
 
 </div>
@@ -14331,11 +14334,51 @@ $$<ul>
 <li>Operations composed of intervals and
   bound the range of corresponding real operations, rigorously, using outward rounding, on real computer hardware.</li>
 </ul>
-<h3 id="Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">Note: update of old data by new data, always proceeds by taking the intersection.<a class="anchor-link" href="#Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">&#182;</a></h3><p>Without this, nothing will work.</p>
+<h3 id="Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">Note: update of old data by new data, always proceeds by taking the intersection.<a class="anchor-link" href="#Note:-update-of-old-data-by-new-data,-always-proceeds-by-taking-the-intersection.">&#182;</a></h3><p>Without this, nothing interval constraint programming will not work.</p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[284]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">ia</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">2.</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">ia</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">5.</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ia</span><span class="p">(</span><span class="o">-</span><span class="mf">1000.</span><span class="p">,</span><span class="mf">1000.</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="k">print</span> <span class="s1">&#39;c = &#39;</span><span class="p">,</span><span class="n">c</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">ia</span><span class="p">(</span><span class="o">-</span><span class="mf">2.</span><span class="p">,</span><span class="mf">3.</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="k">print</span> <span class="s1">&#39;c = &#39;</span><span class="p">,</span><span class="n">c</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>c =  ia(1.0,7.0)
+c =  ia(1.0,3.0)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">

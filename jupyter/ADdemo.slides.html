@@ -13255,7 +13255,7 @@ a.anchor-link {
 <li>Here I pick a problem to automate and tell you a little about it </li>
 </ul>
 <h2 id="Design">Design<a class="anchor-link" href="#Design">&#182;</a></h2><ul>
-<li>Functional minimization (extrema finding) sets the stage for what's to come</li>
+<li>Constrained functional minimization (extrema finding) sets the stage for what's to come</li>
 </ul>
 
 </div>
@@ -13277,32 +13277,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Automatic-Differentiation">Automatic Differentiation<a class="anchor-link" href="#Automatic-Differentiation">&#182;</a></h2><ul>
-<li>Programming without (as much) programming and...<ul>
-<li>no finite differences</li>
-<li>no symbolic derivatives</li>
-<li>values exact to floating point</li>
-</ul>
-</li>
-</ul>
-<h2 id="(interval)-Constraint-programming">(interval) Constraint programming<a class="anchor-link" href="#(interval)-Constraint-programming">&#182;</a></h2><ul>
-<li>Design without (as much) <em>search</em></li>
-<li>Because we eliminate infeasible designs</li>
-</ul>
-<h2 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h2><ul>
-<li>If your going to solve a problem, eventually you have to... solve a problem.</li>
-<li>I picked an easy one so I could finish with reasonable effort.</li>
-</ul>
-
-</div>
-</div>
-</div>
-</aside></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13340,8 +13315,8 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="In-Ship-Design-Automation,">In Ship Design Automation,<a class="anchor-link" href="#In-Ship-Design-Automation,">&#182;</a></h2><h2 id="geometry-generation-has-been-a-major-bottleneck">geometry generation has been a major bottleneck<a class="anchor-link" href="#geometry-generation-has-been-a-major-bottleneck">&#182;</a></h2><ul>
 <li>Physics solvers are "mature" (some more so than others)</li>
-<li>we are <em>getting</em> <em>better</em> at meshing (not great yet)</li>
-<li>we generate designs by the engineer-week (month? $$$)</li>
+<li>we are <em>getting</em> <em>better</em> at meshing (not great yet - also a bottleneck)</li>
+<li>we generate designs by the engineer-week ($$$)</li>
 </ul>
 
 </div>
@@ -13354,7 +13329,7 @@ a.anchor-link {
 <li>State of the art for early stage ship design</li>
 <li>Works by constrained optimization, minimizing some energy fuctional with constraints.</li>
 </ul>
-<h3 id="It-turns-design-into-a-functional-to-be-minimized.">It turns design into a functional to be minimized.<a class="anchor-link" href="#It-turns-design-into-a-functional-to-be-minimized.">&#182;</a></h3>
+<h3 id="It-turns-design-into-a-series-of-functionals-to-be-minimized.">It turns design into a series of functionals to be minimized.<a class="anchor-link" href="#It-turns-design-into-a-series-of-functionals-to-be-minimized.">&#182;</a></h3>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13536,17 +13511,20 @@ the gradient of $F$ is zero. (Then check your solution)</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-setup-AD">How to setup AD<a class="anchor-link" href="#How-to-setup-AD">&#182;</a></h2><p>For automatic differentiation on a design space, you need only a couple of 2x2 matrices:</p>
+<h2 id="How-to-setup-AD">How to setup AD<a class="anchor-link" href="#How-to-setup-AD">&#182;</a></h2><p>(assuming you have built a class for the overloading...)</p>
+<p>For automatic differentiation on a design space, you need only a couple of matrices:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># for the gradient</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Let&#39;s say my design space has only 2 variables for the moment</span>
+
+<span class="c1"># for the gradient</span>
 <span class="n">identity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span>
                 <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># [2x2] identity matrix </span>
 
@@ -13570,7 +13548,7 @@ the gradient of $F$ is zero. (Then check your solution)</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> 
@@ -13598,7 +13576,7 @@ the gradient of $F$ is zero. (Then check your solution)</p>
 </aside>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;x0.value = &#39;</span><span class="p">,</span><span class="n">x0</span><span class="o">.</span><span class="n">value</span>
@@ -13644,7 +13622,7 @@ x0.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> 
@@ -13704,7 +13682,7 @@ x1.hess  =
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
@@ -13751,19 +13729,6 @@ test hessian
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13774,7 +13739,7 @@ test hessian
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">dimensions</span> <span class="o">=</span> <span class="mi">2</span>   <span class="c1"># 2D curve example</span>
@@ -13798,13 +13763,13 @@ test hessian
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[85]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f9647808210&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f9641576e90&gt;</pre>
 </div>
 
 </div>
@@ -13845,7 +13810,7 @@ the bending energy in the curve when $N=2$.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">precompute_curve_integrals</span><span class="p">()</span>
@@ -13887,7 +13852,7 @@ curve1.E2 = 7210.666666666669
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
@@ -13948,7 +13913,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">fairness</span><span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">vertices</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -13994,7 +13959,7 @@ integrals of prodcts of basis functions and their derivatives which never change
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#call our new function with AD xpts and ypts:</span>
@@ -14074,7 +14039,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># create a dictionary to hold components of our Functional F:</span>
@@ -14111,7 +14076,7 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#setup and solve:</span>
@@ -14132,13 +14097,13 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[92]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f9641cb8bd0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f96412ed550&gt;</pre>
 </div>
 
 </div>
@@ -14341,7 +14306,7 @@ $$<ul>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">ia</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">2.</span><span class="p">)</span>
@@ -14464,7 +14429,7 @@ $$</p>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">fragment</span><span class="o">=</span> \
@@ -14535,7 +14500,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;Make some design space variables:</span>
@@ -14564,7 +14529,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">vol</span> <span class="o">=</span> <span class="n">vol</span> <span class="o">==</span> <span class="n">ia</span><span class="p">(</span><span class="mf">50000.</span><span class="p">,</span><span class="mf">100000.</span><span class="p">)</span>
@@ -14587,7 +14552,7 @@ $$</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;-----------------------------------------------</span>
@@ -14613,12 +14578,12 @@ $$</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&#39;Cb&#39;==
-   &#39;v3&#39;/
+   &#39;v18&#39;/
       &#39;vol&#39;==
          &#39;ia(50000.0,100000.0)&#39; 
         
-      &#39;v2&#39;*
-         &#39;v1&#39;*
+      &#39;v17&#39;*
+         &#39;v16&#39;*
             &#39;lwl&#39; 
         
             &#39;bwl&#39;==
@@ -14755,6 +14720,19 @@ $$</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>

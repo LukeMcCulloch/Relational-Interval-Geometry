@@ -13242,7 +13242,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Constraint-Programming-and-Automatic-Differentiation-for-Engineering-Design">Constraint Programming and Automatic Differentiation for Engineering Design<a class="anchor-link" href="#Constraint-Programming-and-Automatic-Differentiation-for-Engineering-Design">&#182;</a></h1><hr>
+<h1>Constraint Programming and Automatic Differentiation <br> for Automated Engineering Design</h1>
+<hr>
 <h3 id="Luke-McCulloch,-PhD">Luke McCulloch, PhD<a class="anchor-link" href="#Luke-McCulloch,-PhD">&#182;</a></h3>
 </div>
 </div>
@@ -13459,24 +13460,13 @@ the gradient of $F$ is $\underline{0}$</p>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-Auto-Diff">How to Auto Diff<a class="anchor-link" href="#How-to-Auto-Diff">&#182;</a></h2><p>In principle, for automatic differentiation on a design space, you need only very simple things</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># problem space size</span>
-
-<span class="n">identity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">num_in_vec</span><span class="p">)</span>
-
-<span class="n">nullmatrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_in_vec</span><span class="p">,</span><span class="n">num_in_vec</span><span class="p">),</span><span class="nb">float</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span> <span class="c1">#linear algebra</span>
+<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13486,12 +13476,71 @@ the gradient of $F$ is $\underline{0}$</p>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span> <span class="mf">2.</span><span class="p">,</span> 
-        <span class="n">grad</span> <span class="o">=</span> <span class="n">identity</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> 
-        <span class="n">hess</span> <span class="o">=</span> <span class="n">nullmatrix</span><span class="p">,</span> 
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">relational_lsplines</span> <span class="kn">as</span> <span class="nn">rsp</span> <span class="c1">#my stuff</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">curve</span> <span class="o">=</span> <span class="n">rsp</span><span class="o">.</span><span class="n">curve</span> <span class="c1">#Bspline curve and surface module</span>
+
+
+<span class="n">automatic_differentiation</span> <span class="o">=</span> <span class="n">rsp</span><span class="o">.</span><span class="n">automatic_differentiation</span> <span class="c1">#automatic_differentiation &quot;module&quot;</span>
+                    <span class="c1"># simple fwd mode with vectors and intervals supported</span>
+
+<span class="n">adObjectMaker</span> <span class="o">=</span> <span class="n">automatic_differentiation</span><span class="o">.</span><span class="n">adObjectMaker</span>
+
+<span class="n">ad</span> <span class="o">=</span> <span class="n">automatic_differentiation</span><span class="o">.</span><span class="n">ad</span>                   <span class="c1">#automatic differentiation class</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-to-Auto-Diff">How to Auto Diff<a class="anchor-link" href="#How-to-Auto-Diff">&#182;</a></h2><p>In principle, for automatic differentiation on a design space, you need only very simple things</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># problem space size, in this toy example</span>
+
+<span class="n">identity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">num_in_vec</span><span class="p">))</span> <span class="c1"># [2x2] identity matrix</span>
+
+<span class="n">nullmatrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_in_vec</span><span class="p">,</span><span class="n">num_in_vec</span><span class="p">),</span><span class="nb">float</span><span class="p">))</span> <span class="c1"># [2x2] matrix of 0s</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> 
+        <span class="n">grad</span>  <span class="o">=</span> <span class="n">identity</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> 
+        <span class="n">hess</span>  <span class="o">=</span> <span class="n">nullmatrix</span><span class="p">,</span> 
         <span class="n">of_scalars</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="k">print</span> <span class="s1">&#39;x0.value = &#39;</span><span class="p">,</span><span class="n">x0</span><span class="o">.</span><span class="n">value</span>
@@ -13514,8 +13563,8 @@ the gradient of $F$ is $\underline{0}$</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>x0.value =  2.0
-x0.grad  =  [1. 0.]
+<pre>x0.value =  0.5
+x0.grad  =  [[1. 0.]]
 x0.hess  = 
 [[0. 0.]
  [0. 0.]]
@@ -13553,12 +13602,12 @@ with sizes denoted by the problem space.</p>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span> <span class="mf">2.</span><span class="p">,</span> 
-        <span class="n">grad</span> <span class="o">=</span> <span class="n">identity</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
-        <span class="n">hess</span> <span class="o">=</span> <span class="n">nullmatrix</span><span class="p">,</span> 
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> 
+        <span class="n">grad</span>  <span class="o">=</span> <span class="n">identity</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
+        <span class="n">hess</span>  <span class="o">=</span> <span class="n">nullmatrix</span><span class="p">,</span> 
         <span class="n">of_scalars</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="k">print</span> <span class="s1">&#39;&#39;</span>
@@ -13584,7 +13633,7 @@ with sizes denoted by the problem space.</p>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 x1.value =  2.0
-x1.grad  =  [0. 1.]
+x1.grad  =  [[0. 1.]]
 x1.hess  = 
 [[0. 0.]
  [0. 0.]]
@@ -13598,14 +13647,17 @@ x1.hess  =
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
+
 <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">test value&#39;</span>
 <span class="k">print</span> <span class="n">test</span><span class="o">.</span><span class="n">value</span>
+
 <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">test gradient&#39;</span>
 <span class="k">print</span> <span class="n">test</span><span class="o">.</span><span class="n">grad</span>
+
 <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">test hessian&#39;</span>
 <span class="k">print</span> <span class="n">test</span><span class="o">.</span><span class="n">hess</span>
 </pre></div>
@@ -13626,14 +13678,14 @@ x1.hess  =
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 test value
-6.0
+4.5
 
 test gradient
-[1. 4.]
+[[1. 4.]]
 
 test hessian
-[[2. 2.]
- [2. 2.]]
+[[0. 0.]
+ [0. 2.]]
 </pre>
 </div>
 </div>

@@ -5,6 +5,9 @@ Created on Sun Aug  4 15:06:27 2019
 
 @author: lukemcculloch
 """
+import warnings
+warnings.filterwarnings('ignore') #sorry, I've got old code that needs updating -- shame on me!
+
 
 import numpy as np #linear algebra
 np.set_printoptions(precision=3)
@@ -37,26 +40,44 @@ ad = automatic_differentiation.ad                   #automatic differentiation c
 ia = rsp.ia                                         #interval analysis class
 
 
-num_in_vec = 2
-
 
 ##
 ##*****************************************
 ## Make some AD (auto differentiation) numbers
 
-identity = np.identity(num_in_vec)
-nullmatrix = np.zeros((num_in_vec,num_in_vec),float)
+num_in_vec = 2  # problem space size, in this toy example
+
+identity = np.matrix(np.identity(num_in_vec))
+nullmatrix = np.matrix(np.zeros((num_in_vec,num_in_vec),float))
 
 # of_scalars=True     : means you intend to use this number in a vector of real numbers (False is default)
 #x0 = ad( 2., N=num_in_vec, dim=0, of_scalars=True)
 #x1 = ad( 2., N=num_in_vec, dim=1, of_scalars=True)
 
-x0 = ad( 2., grad = identity[0], hess = nullmatrix, N=num_in_vec, dim=0, of_scalars=True)
-x1 = ad( 2., grad = identity[1], hess = nullmatrix, N=num_in_vec, dim=1, of_scalars=True)
-print x0.grad
+x0 = ad( 0.5, 
+        grad = identity[0], 
+        hess = nullmatrix, 
+        of_scalars=True)
+print 'x0.value = ',x0.value
+print 'x0.grad  = ', x0.grad
+print 'x0.hess  = '
 print x0.hess
-print x1.grad
+
+print type(x0.grad)
+
+
+x1 = ad( 2., 
+        grad = identity[1], 
+        hess = nullmatrix, 
+        of_scalars=True)
+
+print ''
+print 'x1.value = ',x1.value
+print 'x1.grad  = ', x1.grad
+print 'x1.hess  = '
 print x1.hess
+
+print type(x1.grad)
 
 
 test = x0 + x1**2
@@ -77,29 +98,29 @@ print test.hess
 ##
 ## do things by hand to show that it works..
 
-dimensions = 2
-order = 4
-
-vertices=np.asarray([[0.,0.],
-                     [2.,0.],
-                     [3.0,0.],
-                     [6.0,5.],
-                     [9.0,12.],
-                     [11.,12.],
-                     [12.,12.]])
-
-num_in_vec = len(vertices)
-
-xpts = []
-ypts = []
-for i in range(num_in_vec):
-    xpti = vertices[i,0]
-    ypti = vertices[i,0]
-    xpts.append( ad( xpti, N=num_in_vec*dimensions, 
-                    dim=i, of_scalars=True) )
-    ypts.append( ad( ypti, N=num_in_vec*dimensions, 
-                    dim=i+num_in_vec, of_scalars=True) )
-    
-curve1 = curve.Bspline(vertices,order)
-curve1.plotcurve_detailed()
-precompute_curve_integrals()
+#dimensions = 2
+#order = 4
+#
+#vertices=np.asarray([[0.,0.],
+#                     [2.,0.],
+#                     [3.0,0.],
+#                     [6.0,5.],
+#                     [9.0,12.],
+#                     [11.,12.],
+#                     [12.,12.]])
+#
+#num_in_vec = len(vertices)
+#
+#xpts = []
+#ypts = []
+#for i in range(num_in_vec):
+#    xpti = vertices[i,0]
+#    ypti = vertices[i,0]
+#    xpts.append( ad( xpti, N=num_in_vec*dimensions, 
+#                    dim=i, of_scalars=True) )
+#    ypts.append( ad( ypti, N=num_in_vec*dimensions, 
+#                    dim=i+num_in_vec, of_scalars=True) )
+#    
+#curve1 = curve.Bspline(vertices,order)
+#curve1.plotcurve_detailed()
+#precompute_curve_integrals()

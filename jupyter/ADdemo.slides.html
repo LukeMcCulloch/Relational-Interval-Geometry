@@ -13242,7 +13242,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1>Constraint Programming and Automatic Differentiation <br> for Automated Engineering Design</h1>
+<h1>Constraint Programming and <br> Automatic Differentiation <br> for Automated Engineering Design</h1>
 <hr>
 <h3 id="Luke-McCulloch,-PhD">Luke McCulloch, PhD<a class="anchor-link" href="#Luke-McCulloch,-PhD">&#182;</a></h3>
 </div>
@@ -13251,10 +13251,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Automation">Automation<a class="anchor-link" href="#Automation">&#182;</a></h2><ul>
+<h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><h2 id="Automation">Automation<a class="anchor-link" href="#Automation">&#182;</a></h2><ul>
 <li>Here I pick a problem to automate and tell you a little about it</li>
 </ul>
-<h2 id="Automated-Design">Automated Design<a class="anchor-link" href="#Automated-Design">&#182;</a></h2><ul>
+<h2 id="Design">Design<a class="anchor-link" href="#Design">&#182;</a></h2><ul>
 <li>Functional minimization (extrema finding) sets the stage for what's to come</li>
 </ul>
 
@@ -13264,17 +13264,33 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Automatic-Differentiation">Automatic Differentiation<a class="anchor-link" href="#Automatic-Differentiation">&#182;</a></h2><ul>
+<h1 id="What's-to-come?">What's to come?<a class="anchor-link" href="#What's-to-come?">&#182;</a></h1><h2 id="Automatic-Differentiation">Automatic Differentiation<a class="anchor-link" href="#Automatic-Differentiation">&#182;</a></h2><ul>
 <li>Programming without (as much) programming</li>
-<li>Gradient decent without gradient coding</li>
-<li>Gradients and Hessians with <ul>
+</ul>
+<h2 id="(interval)-Constraint-programming">(interval) Constraint programming<a class="anchor-link" href="#(interval)-Constraint-programming">&#182;</a></h2><ul>
+<li>Design without (as much) <em>search</em></li>
+</ul>
+<h2 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h2><ul>
+<li>If your going to solve a problem, eventually you have to... solve a problem.</li>
+<li>Let's see some results</li>
+</ul>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Automatic-Differentiation">Automatic Differentiation<a class="anchor-link" href="#Automatic-Differentiation">&#182;</a></h2><ul>
+<li>Programming without (as much) programming and...<ul>
 <li>no finite differences</li>
 <li>no symbolic derivatives</li>
 <li>values exact to floating point</li>
 </ul>
 </li>
 </ul>
-<h2 id="Interval-constraint-programming">Interval constraint programming<a class="anchor-link" href="#Interval-constraint-programming">&#182;</a></h2><ul>
+<h2 id="(interval)-Constraint-programming">(interval) Constraint programming<a class="anchor-link" href="#(interval)-Constraint-programming">&#182;</a></h2><ul>
 <li>Design without (as much) <em>search</em></li>
 <li>Because we eliminate infeasible designs</li>
 </ul>
@@ -13285,7 +13301,8 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
+</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13321,16 +13338,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="fig/TradDesignVsOptimization.png" alt="title"></p>
-<h1 id="Automate-Design-Exploration">Automate Design Exploration<a class="anchor-link" href="#Automate-Design-Exploration">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="In-Ship-Design-Automation,">In Ship Design Automation,<a class="anchor-link" href="#In-Ship-Design-Automation,">&#182;</a></h2><h2 id="geometry-generation-has-been-a-major-bottleneck">geometry generation has been a major bottleneck<a class="anchor-link" href="#geometry-generation-has-been-a-major-bottleneck">&#182;</a></h2><ul>
-<li>Physics solvers are "mature" (enough I guess)</li>
+<li>Physics solvers are "mature" (some more so than others)</li>
 <li>we are <em>getting</em> <em>better</em> at meshing (not great yet)</li>
 <li>we generate designs by the engineer-week (month? $$$)</li>
 </ul>
@@ -13368,7 +13377,7 @@ $$<p><img src="fig/Rules/Cb.png" alt="title"></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Properties-we-care-about:--differential-/-transitional">Properties we care about:  differential / transitional<a class="anchor-link" href="#Properties-we-care-about:--differential-/-transitional">&#182;</a></h2><p><img src="fig/HullProperties/DifferentialProperties.png" alt="title"></p>
+<h2 id="Properties-we-care-about:--differential-/-transitional">Properties we care about:  differential / transitional<a class="anchor-link" href="#Properties-we-care-about:--differential-/-transitional">&#182;</a></h2><p><img src="fig/HullProperties/DifferentialProperties.png" alt="Drawing" style="width: 600px;"/></p>
 
 </div>
 </div>
@@ -13376,7 +13385,8 @@ $$<p><img src="fig/Rules/Cb.png" alt="title"></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Properties-we-care-about:-sectional-areas">Properties we care about: sectional areas<a class="anchor-link" href="#Properties-we-care-about:-sectional-areas">&#182;</a></h2><p><img src="fig/midship_inplace.png" alt="title"></p>
+<h2 id="Properties-we-care-about:-sectional-areas">Properties we care about: sectional areas<a class="anchor-link" href="#Properties-we-care-about:-sectional-areas">&#182;</a></h2><p><img src="fig/midship_inplace.png" alt="Drawing" style="width: 500px;"/></p>
+<p><img src="fig/HullProperties/MidshipCoeff.png" alt="Drawing" style="width: 500px;"/></p>
 
 </div>
 </div>
@@ -13384,15 +13394,7 @@ $$<p><img src="fig/Rules/Cb.png" alt="title"></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Properties-we-care-about:--sectional-area">Properties we care about:  sectional area<a class="anchor-link" href="#Properties-we-care-about:--sectional-area">&#182;</a></h2><p><img src="fig/HullProperties/MidshipCoeff.png" alt="title"></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Properties-we-care-about:--volumetric-/-represented-as-area-again!">Properties we care about:  volumetric / represented as area again!<a class="anchor-link" href="#Properties-we-care-about:--volumetric-/-represented-as-area-again!">&#182;</a></h2><p><img src="fig/HullProperties/SAC.png" alt="title"></p>
+<h2 id="Properties-we-care-about:--volumetric-/-represented-as-area-again!">Properties we care about:  volumetric / represented as area again!<a class="anchor-link" href="#Properties-we-care-about:--volumetric-/-represented-as-area-again!">&#182;</a></h2><p><img src="fig/HullProperties/SAC.png" alt="Drawing" style="width: 600px;"/></p>
 
 </div>
 </div>
@@ -13404,7 +13406,17 @@ $$<p><img src="fig/Rules/Cb.png" alt="title"></p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Some of you might be thinking, for our purposes we need to only change sizes of pieces of structure, no need to worry about differential properties, or similar, don't worry, we have something in here for you too.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13412,7 +13424,22 @@ $$<p><img src="fig/Rules/Cb.png" alt="title"></p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The complicated slide above tries to convey how constraints</p>
+<p>are transformed into curves,</p>
+<p>which then inform a new layer of constraints, and subsequent curves</p>
+<p>in this multilayer hierarchical process from coarse grained global description</p>
+<p>to local description on the hull</p>
+<p>It's curve solving and constraints all the way down</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13428,9 +13455,14 @@ $$<p><img src="fig/Rules/Cb.png" alt="title"></p>
 \begin{equation}
 \underline{q}(t)\;=\;\sum_{i=0}^{n}\underline{V}_{i}N_{i,k}(t) 
 \label{eq:optproblem}
-\end{equation}<p>such that a flexible set of selected form parameters 
+\end{equation}<p>such that a flexible set of selected form parameters, $\underline{h}$ 
 is met and, in addition, the curve is considered "good" 
-in terms of a problem-oriented measure.</p>
+in terms of a problem-oriented measure, $f$.</p>
+<p>$\underline{V}_{i}$ are the control vertices
+<br>
+$N_{i,k}$ are the basis functions
+<br>
+$\underline{q}\left(t\right)$ is the value of the curve at parameter $t$</p>
 
 </div>
 </div>
@@ -13441,6 +13473,11 @@ in terms of a problem-oriented measure.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Find a B-spline curve of given order $k$, number of vertices $n+1$, and specified knot 
 vector $\underline{T}$</p>
+<p>$\underline{V}_{i}$ are the control vertices
+<br>
+$N_{i,k}$ are the basis functions
+<br>
+$\underline{q}\left(t\right)$ is the value of the curve at parameter $t$</p>
 
 </div>
 </div>
@@ -13449,58 +13486,70 @@ vector $\underline{T}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Problem:</p>
+<p>So, write down the problem:</p>
 $$
 F = f + \sum_{j \in \left[ \forall h \right]}  \lambda_j h_j    
-$$$$F = F\left(\underline{V},\underline{\lambda}\right)$$<p>Solution:</p>
+$$$$
+f = f\left(\underline{V}\right) \\
+h_j = h_j\left(\underline{V}\right) \\
+$$<p>$
+\lambda_j$ are Lagrange multipliers</p>
+<p>Solve via Newton's method.  (We want geometry that minimizes $F$)</p>
+<p>Solution:</p>
 $$\underline{\nabla} F = [0,0,0,0.... ]^T$$<p>Find control vertices and Lagrange multipliers such that 
-the gradient of $F$ is $\underline{0}$</p>
-<p>Solve via Newton's method.</p>
+the gradient of $F$ is zero.</p>
 
 </div>
 </div>
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-Automatic-Differentiation-(AD)?">What is Automatic Differentiation (AD)?<a class="anchor-link" href="#What-is-Automatic-Differentiation-(AD)?">&#182;</a></h2><ul>
+<li>no finite differences</li>
+<li>no symbolic derivatives</li>
+<li>values exact to floating point</li>
+</ul>
+<p>Derivatives by construction:</p>
+<ul>
+<li>Overload mathmatical operations to return value, gradient, and hessian</li>
+<li>where each computation includes the natural rules from calculus.</li>
+</ul>
+<p>(Python Numpy makes it easy to extend to vectors and matrices)</p>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I am not going to get into the weeds on forward mode vs reverse mode here</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-to-setup-AD">How to setup AD<a class="anchor-link" href="#How-to-setup-AD">&#182;</a></h2><p>For automatic differentiation on a design space, you need only a couple of 2x2 matrices:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span> <span class="c1">#linear algebra</span>
-<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># for the gradient</span>
+<span class="n">identity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># [2x2] identity matrix </span>
 
-    </div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">relational_lsplines</span> <span class="kn">as</span> <span class="nn">rsp</span> <span class="c1">#my stuff</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">curve</span> <span class="o">=</span> <span class="n">rsp</span><span class="o">.</span><span class="n">curve</span> <span class="c1">#Bspline curve and surface module</span>
-
-
-<span class="n">automatic_differentiation</span> <span class="o">=</span> <span class="n">rsp</span><span class="o">.</span><span class="n">automatic_differentiation</span> <span class="c1">#automatic_differentiation &quot;module&quot;</span>
-                    <span class="c1"># simple fwd mode with vectors and intervals supported</span>
-
-<span class="n">adObjectMaker</span> <span class="o">=</span> <span class="n">automatic_differentiation</span><span class="o">.</span><span class="n">adObjectMaker</span>
-
-<span class="n">ad</span> <span class="o">=</span> <span class="n">automatic_differentiation</span><span class="o">.</span><span class="n">ad</span>                   <span class="c1">#automatic differentiation class</span>
+<span class="c1"># for the Hessian</span>
+<span class="n">nullmatrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="nb">float</span><span class="p">))</span> <span class="c1"># [2x2] null matrix</span>
 </pre></div>
 
     </div>
@@ -13511,39 +13560,45 @@ the gradient of $F$ is $\underline{0}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-Auto-Diff">How to Auto Diff<a class="anchor-link" href="#How-to-Auto-Diff">&#182;</a></h2><p>In principle, for automatic differentiation on a design space, you need only very simple things</p>
+<h2 id="How-to-setup-AD">How to setup AD<a class="anchor-link" href="#How-to-setup-AD">&#182;</a></h2><p>Instantiate an AD object:</p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># problem space size, in this toy example</span>
-
-<span class="n">identity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">num_in_vec</span><span class="p">))</span> <span class="c1"># [2x2] identity matrix</span>
-
-<span class="n">nullmatrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_in_vec</span><span class="p">,</span><span class="n">num_in_vec</span><span class="p">),</span><span class="nb">float</span><span class="p">))</span> <span class="c1"># [2x2] matrix of 0s</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> 
+        <span class="n">grad</span>  <span class="o">=</span> <span class="n">identity</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> 
+        <span class="n">hess</span>  <span class="o">=</span> <span class="n">nullmatrix</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="This-use-of-the-identity-matrix-to-appoint-gradients-to-free-variables-of-the-design-space-is-reminecint-of-the-adjacency-matrix-from-meshing.">This use of the identity matrix to appoint gradients to free variables of the design space is reminecint of the adjacency matrix from meshing.<a class="anchor-link" href="#This-use-of-the-identity-matrix-to-appoint-gradients-to-free-variables-of-the-design-space-is-reminecint-of-the-adjacency-matrix-from-meshing.">&#182;</a></h3><ul>
+<li>and we all know that the connectivity of a mesh, as defined by it's adjacency matrices on vertices, edges, and faces, leads directly to the exterior derivative of said quantities.</li>
+<li>coincidence?  Heck no!</li>
+</ul>
+
+</div>
+</div>
+</div>
+</aside>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> 
-        <span class="n">grad</span>  <span class="o">=</span> <span class="n">identity</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> 
-        <span class="n">hess</span>  <span class="o">=</span> <span class="n">nullmatrix</span><span class="p">,</span> 
-        <span class="n">of_scalars</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
-<span class="k">print</span> <span class="s1">&#39;x0.value = &#39;</span><span class="p">,</span><span class="n">x0</span><span class="o">.</span><span class="n">value</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;x0.value = &#39;</span><span class="p">,</span><span class="n">x0</span><span class="o">.</span><span class="n">value</span>
 <span class="k">print</span> <span class="s1">&#39;x0.grad  = &#39;</span><span class="p">,</span> <span class="n">x0</span><span class="o">.</span><span class="n">grad</span>
 <span class="k">print</span> <span class="s1">&#39;x0.hess  = &#39;</span>
 <span class="k">print</span> <span class="n">x0</span><span class="o">.</span><span class="n">hess</span>
@@ -13575,40 +13630,23 @@ x0.hess  =
 </div>
 </div>
 
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="This-use-of-the-identity-matrix-to-appoint-gradients-to-free-variables-of-the-design-space-is-reminecint-of-the-adjacency-matrix-from-meshing.">This use of the identity matrix to appoint gradients to free variables of the design space is reminecint of the adjacency matrix from meshing.<a class="anchor-link" href="#This-use-of-the-identity-matrix-to-appoint-gradients-to-free-variables-of-the-design-space-is-reminecint-of-the-adjacency-matrix-from-meshing.">&#182;</a></h3><ul>
-<li>and we all know that the connectivity of a mesh, as defined by it's adjacency matrices on vertices, edges, and faces, leads directly to the exterior derivative of said quantities.</li>
-<li>coincidence?  Heck no!</li>
-</ul>
-
-</div>
-</div>
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>So we have created a variable, x0</p>
-<p>We gave it a gradient and hessian associated with it, 
-with sizes denoted by the problem space.</p>
-<p>Later, this part will be automated too.</p>
-
-</div>
-</div>
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-to-setup-AD">How to setup AD<a class="anchor-link" href="#How-to-setup-AD">&#182;</a></h2><p>Here is the second variable.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">ad</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> 
         <span class="n">grad</span>  <span class="o">=</span> <span class="n">identity</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
-        <span class="n">hess</span>  <span class="o">=</span> <span class="n">nullmatrix</span><span class="p">,</span> 
-        <span class="n">of_scalars</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">hess</span>  <span class="o">=</span> <span class="n">nullmatrix</span><span class="p">)</span>
 
 <span class="k">print</span> <span class="s1">&#39;&#39;</span>
 <span class="k">print</span> <span class="s1">&#39;x1.value = &#39;</span><span class="p">,</span><span class="n">x1</span><span class="o">.</span><span class="n">value</span>
@@ -13644,22 +13682,38 @@ x1.hess  =
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we are ready to compute something</p>
+
+</div>
+</div>
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How about $f = x_0 + x_{1}^{2}$</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
 
-<span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">test value&#39;</span>
-<span class="k">print</span> <span class="n">test</span><span class="o">.</span><span class="n">value</span>
+<span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">test value&#39;</span> <span class="c1"># 0.5 + 2**2 = 4 is...?</span>
+<span class="k">print</span> <span class="n">f</span><span class="o">.</span><span class="n">value</span>
 
-<span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">test gradient&#39;</span>
-<span class="k">print</span> <span class="n">test</span><span class="o">.</span><span class="n">grad</span>
+<span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">test gradient&#39;</span> <span class="c1"># df/dx0 , df/dx1 is ..</span>
+<span class="k">print</span> <span class="n">f</span><span class="o">.</span><span class="n">grad</span><span class="o">.</span><span class="n">T</span>
 
-<span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">test hessian&#39;</span>
-<span class="k">print</span> <span class="n">test</span><span class="o">.</span><span class="n">hess</span>
+<span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">test hessian&#39;</span> <span class="c1">#[ [df/dx0dx0 ,..., df/dx1dx1]] is ... </span>
+<span class="k">print</span> <span class="n">f</span><span class="o">.</span><span class="n">hess</span>
 </pre></div>
 
     </div>
@@ -13681,7 +13735,8 @@ test value
 4.5
 
 test gradient
-[[1. 4.]]
+[[1.]
+ [4.]]
 
 test hessian
 [[0. 0.]
@@ -13710,25 +13765,504 @@ test hessian
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="B-spline-Curves">B-spline Curves<a class="anchor-link" href="#B-spline-Curves">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dimensions</span> <span class="o">=</span> <span class="mi">2</span>   <span class="c1"># 2D curve example</span>
+<span class="n">order</span>      <span class="o">=</span> <span class="mi">4</span>   <span class="c1">#degree + 1</span>
+
+<span class="c1">#numpy array:</span>
+<span class="n">vertices</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([[</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">],[</span><span class="mf">2.</span><span class="p">,</span><span class="mf">0.</span><span class="p">],[</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">],[</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">8.0</span><span class="p">],</span>
+                         <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span><span class="mf">12.</span><span class="p">],[</span><span class="mf">11.</span><span class="p">,</span><span class="mf">12.</span><span class="p">],[</span><span class="mf">12.</span><span class="p">,</span><span class="mf">12.</span><span class="p">]])</span>
+
+<span class="n">curve1</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">Bspline</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span><span class="n">order</span><span class="p">)</span> <span class="c1">#make Bspline curve</span>
+<span class="n">curve1</span><span class="o">.</span><span class="n">plotcurve_detailed</span><span class="p">()</span> <span class="c1">#plot it</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[85]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f872586a690&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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b4ELNY8cWck///l7Lr74IrZt28bChQvZsWMH1113ncJcmpQ6dJEo1O3KO3bczuTJN7N9+3auu+46HnvsMVJTU/0uU1oIdegiEajblX/3uxWsWzePESMyKCwsZNWqVaxatUphLjGlDl2kkep25bCFa66Zzq5du7j55pt5+OGHOf30032uUloidegiYarblQ8bdpQXX7yN0aNHUFFRwdq1a1m6dKnCXHyjDl0kDHW78rKyN5gw4accOHCA22+/nfvvv1/nJRffKdBFTqHuvPL//M9/88gjM/nzn//Meeedx+bNmzWnXOKGAl2kHnW78uTkbUyceB3/+te/uOuuu7j77rtJrnuxTxEfKdBF6gj1ac+1a//IrFmzSE1NZcuWLVx88cV+lylykgYD3cyWAhOAYufcBcFl3YAVQDrwKTDJOXek6coUiY26XfngwaXMnPkznnvuOcaNG8ezzz5L9+7d/S5TJKRwZrk8DYyrs2wusN45dzawPvi9SLNVdwbLmDFwxhkfcfnlQ1m2bBn33Xcfr7zyisJc4lqDHbpzbpOZpddZfA0wMnj/GeAt4E4P6xKJmVDnK3/55ZXccsstJCcns3btWsaMGeN3mSINinQMvZdzrhDAOVdoZj3rW9HMZgAzAPr16xfh7kS8F+p85X36HGPOnDksXLiQSy65hJUrV9K3b1+/SxUJS5O/KeqcWwIsAcjIyHBNvT+RcITqyg8dymfkyEn84x//YObMmSxYsIB27dr5XapI2CIN9CIzSwt252lAsZdFiTSV+q7tuW7dOqZOncpXX33FihUrmDRpkt+lijRapB/9fxmYFrw/DXjJm3JEms7hw7B6NbzzTiDEJ02C9HTH/PnzGTt2LD179uSdd95RmEuzFc60xeUE3gDtYWb5wL3Ag8BKM7sF2A/c0JRFikSjvq68urqa2bN/xSOPPMLkyZN54okn9PF9adbCmeUytZ6HRnlci4jnQo2VJydDZWUlt9xyC3/5y1+YOXMmf/jDH2jVSueqk+ZNnxSVhFRfVw5QXl7O5MmTWbNmDffddx933323riQkCUGBLgmnvq4c4PPPP+eqq65i8+bNPP7449x6662+1iriJQW6JIxTdeUARUVFjBs3jtzcXJYtW8aUKVP8K1akCSjQJSGcqisH+PTTTxkzZgwFBQWsWbOGcePqns1CpPlToEuz1lBXDrBj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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="B-spline-properties">B-spline properties<a class="anchor-link" href="#B-spline-properties">&#182;</a></h2><p>A fairness functional objective:</p>
+\begin{equation}
+E_N \;=\; \intop_{t_{B}}^{t_{E}}\left[
+\left(\frac{\text{d}^{\text{N}}q_{x}}{\text{dt}^{\text{N}}}\right)^2
+\,+\, \left(\frac{\text{d}^{\text{N}} q_y}{\text{dt}^{\text{N}}}\right)^2\,\right] \text{dt}
+\qquad\text{with $N = 1,2,3$}
+\end{equation}<p>$E_N$-norms which approximate things with physical analogies.  e.g.
+the bending energy in the curve when $N=2$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">precompute_curve_integrals</span><span class="p">()</span>
+<span class="k">print</span> <span class="s1">&#39;The value of the second fairness functional, E2 is,&#39;</span>
+<span class="k">print</span> <span class="s1">&#39;curve1.E2 =&#39;</span><span class="p">,</span> <span class="n">curve1</span><span class="o">.</span><span class="n">E2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The value of the second fairness functional, E2 is,
+curve1.E2 = 7210.666666666669
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Automatic-Differentation-of-B-spline-Curves">Automatic Differentation of B-spline Curves<a class="anchor-link" href="#Automatic-Differentation-of-B-spline-Curves">&#182;</a></h2><p>First make AD variables that match the curve vertices:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_in_vec</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
+<span class="n">xpts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ypts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_in_vec</span><span class="p">):</span>
+    <span class="n">xpti</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ypti</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">xpts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">ad</span><span class="p">(</span> <span class="n">xpti</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">num_in_vec</span><span class="o">*</span><span class="n">dimensions</span><span class="p">,</span> 
+                    <span class="n">of_scalars</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">ypts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">ad</span><span class="p">(</span> <span class="n">ypti</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">num_in_vec</span><span class="o">*</span><span class="n">dimensions</span><span class="p">,</span> 
+                    <span class="n">of_scalars</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="n">num_in_vec</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-about-Auto-Diff'ing-fairness-functionals?">How about Auto Diff'ing fairness functionals?<a class="anchor-link" href="#How-about-Auto-Diff'ing-fairness-functionals?">&#182;</a></h2>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A fairness functional objective:</p>
+\begin{equation}
+E_N \;=\; \intop_{t_{B}}^{t_{E}}\left[
+\left(\frac{\text{d}^{\text{N}}q_{x}}{\text{dt}^{\text{N}}}\right)^2
+\,+\, \left(\frac{\text{d}^{\text{N}} q_y}{\text{dt}^{\text{N}}}\right)^2\,\right] \text{dt}
+\qquad\text{with $N = 1,2,3$}
+\end{equation}<p>$E_N$-norms which approximate things with physical analogies.  e.g.
+the bending energy in the curve when $N=2$.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>These can be re-written to pre-compute the integrals.</p>
+\begin{equation}
+E_N \;=\;  \;   
+\underline{v}_x^T \cdot
+\int_{t_B}^{t_E}  \underline{\underline{M}}_{N}(t) \text{dt}  \cdot \underline{v}_x
+\,-\, 
+\underline{v}_{y}^T  \cdot 
+\int_{t_B}^{t_E} \underline{\underline{M}}_{N}^T(t) \text{dt}  \cdot  \underline{v}_{y}  
+\end{equation}<p>The $\underline{\underline{M}}_{N}$ are matrices of
+integrals of prodcts of basis functions and their derivatives which never change.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">fairness</span><span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">vertices</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method to compute the non-weighted fairness </span>
+<span class="sd">        functionals of a B-spline curve.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>        
+    <span class="k">if</span> <span class="n">vertices</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">xpts</span> <span class="o">=</span> <span class="n">curve</span><span class="o">.</span><span class="n">vertices</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">ypts</span> <span class="o">=</span> <span class="n">curve</span><span class="o">.</span><span class="n">vertices</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">xpts</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">ypts</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">E1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">xpts</span><span class="p">,</span><span class="n">curve</span><span class="o">.</span><span class="n">M1</span><span class="p">),</span><span class="n">xpts</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ypts</span><span class="p">,</span><span class="n">curve</span><span class="o">.</span><span class="n">M1</span><span class="p">),</span><span class="n">ypts</span><span class="p">)</span>
+    <span class="n">E2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">xpts</span><span class="p">,</span><span class="n">curve</span><span class="o">.</span><span class="n">M2</span><span class="p">),</span><span class="n">xpts</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ypts</span><span class="p">,</span><span class="n">curve</span><span class="o">.</span><span class="n">M2</span><span class="p">),</span><span class="n">ypts</span><span class="p">)</span>
+    <span class="n">E3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">xpts</span><span class="p">,</span><span class="n">curve</span><span class="o">.</span><span class="n">M3</span><span class="p">),</span><span class="n">xpts</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ypts</span><span class="p">,</span><span class="n">curve</span><span class="o">.</span><span class="n">M3</span><span class="p">),</span><span class="n">ypts</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">E1</span><span class="p">,</span><span class="n">E2</span><span class="p">,</span><span class="n">E3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>These can be re-written to pre-compute the integrals.</p>
+\begin{equation}
+E_N \;=\;  \;   
+\underline{v}_x^T \cdot
+\int_{t_B}^{t_E}  \underline{\underline{M}}_{N}(t) \text{dt}  \cdot \underline{v}_x
+\,-\, 
+\underline{v}_{y}^T  \cdot 
+\int_{t_B}^{t_E} \underline{\underline{M}}_{N}^T(t) \text{dt}  \cdot  \underline{v}_{y}  
+\end{equation}<p>The $\underline{\underline{M}}_{N}$ are matrices of
+integrals of prodcts of basis functions and their derivatives which never change.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#call our new function with AD xpts and ypts:</span>
+<span class="n">e1</span><span class="p">,</span><span class="n">e2</span><span class="p">,</span><span class="n">e3</span> <span class="o">=</span> <span class="n">fairness</span><span class="p">(</span><span class="n">curve1</span><span class="p">,</span> <span class="p">[</span><span class="n">xpts</span><span class="p">,</span><span class="n">ypts</span><span class="p">])</span>
+
+<span class="k">print</span> <span class="s2">&quot;e2 value = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e2</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="k">print</span> <span class="s1">&#39;&#39;</span>
+<span class="k">print</span> <span class="s1">&#39;e2 gradient Transposed = &#39;</span>
+<span class="k">print</span> <span class="n">e2</span><span class="o">.</span><span class="n">grad</span>
+<span class="k">print</span> <span class="s1">&#39;&#39;</span>
+<span class="k">print</span> <span class="s1">&#39;want to see the Hessian?  Here is H(0,0) = &#39;</span>
+<span class="k">print</span> <span class="n">e2</span><span class="o">.</span><span class="n">hess</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>e2 value = 7210.66666667
+
+e2 gradient Transposed = 
+[[-2496.     3456.     -352.    -1152.      544.      384.     -384.
+   1024.     -640.    -1237.333   682.667   554.667   128.     -512.   ]]
+
+want to see the Hessian?  Here is H(0,0) = 
+1535.9999999999982
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Area integration goes the same way.
+For that matter, so do moments of area.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-About-B-spline-Curvature?">How About B-spline Curvature?<a class="anchor-link" href="#How-About-B-spline-Curvature?">&#182;</a></h2>\begin{align}
+c_B \;&amp;=\; \left.\frac{\dot{q}_{x}\ddot{q}_{y}
+    \,-\,\ddot{q}_{x}\dot{q}_{y}}{
+    \sqrt{\dot{q}_{x}^{2}\,+\,\dot{q}_{y}^{2}}}
+\right|_{(t=t_{B})} 
+\end{align}<p>Well, you can't pre-compute it efficiently, but it's just products of B-spline derivatives.
+<br>
+AD has no trouble.<br>
+<br> 
+In general, we can compute tangents along the curve, arc length, centroids (using moments of area)... many quantities, all analytically.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Let's-Optimize-this-Curve">Let's Optimize this Curve<a class="anchor-link" href="#Let's-Optimize-this-Curve">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">FPD</span> <span class="o">=</span> <span class="n">FormParameterDict</span><span class="p">(</span><span class="n">curve1</span><span class="p">)</span> <span class="c1">#create a dictionary to hold components of our Functional F:</span>
+
+<span class="c1">#fairness functional, f:</span>
+<span class="n">FPD</span><span class="o">.</span><span class="n">add_E2</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;LS&#39;</span><span class="p">)</span> <span class="c1">#LS asks our library to minimize this quantity</span>
+
+<span class="c1">#equality constraints, h_j:</span>
+<span class="c1"># C1 (tangent) clamp at the ends:</span>
+<span class="n">FPD</span><span class="o">.</span><span class="n">add_AngleConstraint</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;equality&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span>
+<span class="n">FPD</span><span class="o">.</span><span class="n">add_AngleConstraint</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;equality&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span>
+<span class="c1"># C2 curvature clamp at the ends</span>
+<span class="n">FPD</span><span class="o">.</span><span class="n">add_CurvatureConstraint</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;equality&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span>
+<span class="n">FPD</span><span class="o">.</span><span class="n">add_CurvatureConstraint</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;equality&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Let's-Optimize-this-Curve">Let's Optimize this Curve<a class="anchor-link" href="#Let's-Optimize-this-Curve">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#setup and solve:</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">Lagrangian</span><span class="p">(</span><span class="n">FPD</span><span class="p">)</span> <span class="c1">#shake and bake a bit</span>
+<span class="n">Lspline</span> <span class="o">=</span> <span class="n">IntervalLagrangeSpline</span><span class="p">(</span><span class="n">curve1</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span> <span class="c1">#&quot;interval&quot; name is due to history</span>
+<span class="n">vertices</span> <span class="o">=</span> <span class="n">Lspline</span><span class="o">.</span><span class="n">optimize</span><span class="p">()</span> <span class="c1">#solve it</span>
+
+<span class="n">Lspline</span><span class="o">.</span><span class="n">curve</span><span class="o">.</span><span class="n">plotcurve_detailed</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[92]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8726515450&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Form-Parameter-Design-(FPD)-Shortcomings">Form Parameter Design (FPD) Shortcomings<a class="anchor-link" href="#Form-Parameter-Design-(FPD)-Shortcomings">&#182;</a></h2><p>We optimized that curve.  Now we have the basics of FPD.</p>
+<p>We used Automatic Differentation to make implementation easy</p>
+<p>What's wrong with our automation now?</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Even if all of the initially given form requirements are met, there are sometimes flaws in the resulting shapes because the form parameters may not be appropriately attuned to start with. It takes <em>judgment</em> and often some <em>iteration</em> in order to <em>harmonize</em> all requirements.</p>
+</blockquote>
+<p>Computational Geometry for Ships, Nowaki, et al., 1995 (emphasis added)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-do-we-harmonize-this?">How do we harmonize this?<a class="anchor-link" href="#How-do-we-harmonize-this?">&#182;</a></h1><p><img src="fig/FPD/FPDsummary.png" alt="Drawing" style="width: 700px;"/></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="When-our-inputs-look-like-this:">When our inputs look like this:<a class="anchor-link" href="#When-our-inputs-look-like-this:">&#182;</a></h1><p><img src="fig/FPDinput.png" alt="title"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="(Interval)-Constraint-Programming">(Interval) Constraint Programming<a class="anchor-link" href="#(Interval)-Constraint-Programming">&#182;</a></h2><blockquote><p>A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away.</p>
 </blockquote>
 <p>-Antoine de Saint-Exupéry</p>
 
 </div>
 </div>
-</div><aside class="notes">
-
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sorry, that's melodramatic.<br>
-I just fed my data into a slide generator algorithm.<br>
-I didn't have time to clean it up after.</p>
+<h2 id="Use-Natural-Naval-Archecture-Design-Relationships">Use Natural Naval Archecture Design Relationships<a class="anchor-link" href="#Use-Natural-Naval-Archecture-Design-Relationships">&#182;</a></h2><h3 id="simple-rules-like...">simple rules like...<a class="anchor-link" href="#simple-rules-like...">&#182;</a></h3><p>Block Coefficient
+$$
+\text{C}_{\text{B}} = \frac{\nabla}{\text{L}_{\text{WL}} \times \text{B}    \times \text{D}}
+$$
+Midship Coefficient
+$$
+\text{C}_{\text{M}} = \frac{\text{A}_{\text{M}}}{\text{B} \times \text{D}}
+$$
+Prismatic Coefficient
+$$
+\text{C}_{\text{P}} = \frac{\nabla}{\text{L}_{\text{WL}} \times \text{B} \times D \times \text{C}_{\text{M}}}= \frac{\text{C}_{\text{B}}}{\text{C}_{\text{M}} }
+$$</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-do-these-rules-look-like?">What do these rules look like?<a class="anchor-link" href="#What-do-these-rules-look-like?">&#182;</a></h2><p><img src="fig/Rules/Cb.png" alt="title"></p>
+<h3 id="Very-similar-to-what-we-are-already-doing!">Very similar to what we are already doing!<a class="anchor-link" href="#Very-similar-to-what-we-are-already-doing!">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>instead of controlling one number directly as a constraint,</li>
+<li>we specify relationships between the design variables, </li>
+<li>and use constraint solving to eliminate infeasible choices</li>
+</ul>
 
 </div>
 </div>
 </div>
-</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Wait,-what-are-we-going-to-do...?">Wait, what are we going to do...?<a class="anchor-link" href="#Wait,-what-are-we-going-to-do...?">&#182;</a></h1><h2 id="Answer:--Setup-a-design-space-in-a-new-way">Answer:  Setup a design space in a new way<a class="anchor-link" href="#Answer:--Setup-a-design-space-in-a-new-way">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A-design-space-consists-of-several-form-parameters:">A design space consists of several form parameters:<a class="anchor-link" href="#A-design-space-consists-of-several-form-parameters:">&#182;</a></h3>$$
+\begin{eqnarray*}
+\nabla &amp; : &amp; \text{volumetric displacement} \\
+\text{L}_{\text{WL}} &amp; : &amp; \text{length along the waterline} \\
+\text{B} &amp; : &amp; \text{width at midship} \\
+\text{D} &amp; : &amp; \text{distance from waterline to the keel} \\
+\text{A}_{\text{M}} &amp; : &amp; \text{midship area} \\
+\text{C}_{\text{B}} &amp; : &amp; \text{block coefficient} \\
+\text{C}_{\text{M}}  &amp; : &amp; \text{midship coefficient} 
+\end{eqnarray*}
+$$<p>(in general on the order of 20-30 parameters and design ratios)</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">

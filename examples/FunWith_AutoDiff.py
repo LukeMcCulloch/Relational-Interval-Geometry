@@ -10,11 +10,13 @@ warnings.filterwarnings('ignore') #sorry, I've got old code that needs updating 
 
 
 import numpy as np #linear algebra
-np.set_printoptions(precision=3)
+#np.set_printoptions(precision=3)
 #np.set_printoptions(threshold=3)
 
 # import my feasible form parameter design PhD code-dump/library
 import relational_lsplines as rsp
+
+
 
 
 def precompute_curve_integrals():
@@ -27,7 +29,7 @@ def precompute_curve_integrals():
     curve1.compute_area()
     return
 
-curve = rsp.curve #Bspline curve and surface module
+spline = rsp.curve #Bspline curve and surface module
 
 
 automatic_differentiation = rsp.automatic_differentiation # just what it sounds like,
@@ -98,29 +100,89 @@ print test.hess
 ##
 ## do things by hand to show that it works..
 
-#dimensions = 2
-#order = 4
-#
-#vertices=np.asarray([[0.,0.],
-#                     [2.,0.],
-#                     [3.0,0.],
-#                     [6.0,5.],
-#                     [9.0,12.],
-#                     [11.,12.],
-#                     [12.,12.]])
-#
-#num_in_vec = len(vertices)
-#
-#xpts = []
-#ypts = []
-#for i in range(num_in_vec):
-#    xpti = vertices[i,0]
-#    ypti = vertices[i,0]
-#    xpts.append( ad( xpti, N=num_in_vec*dimensions, 
-#                    dim=i, of_scalars=True) )
-#    ypts.append( ad( ypti, N=num_in_vec*dimensions, 
-#                    dim=i+num_in_vec, of_scalars=True) )
-#    
-#curve1 = curve.Bspline(vertices,order)
-#curve1.plotcurve_detailed()
-#precompute_curve_integrals()
+dimensions = 2
+order = 4
+
+vertices=np.asarray([[0.,0.],
+                     [2.,0.],
+                     [3.0,0.],
+                     [3.0,8.0],
+                     [9.0,12.],
+                     [11.,12.],
+                     [12.,12.]])
+
+num_in_vec = len(vertices)
+
+xpts = []
+ypts = []
+for i in range(num_in_vec):
+    xpti = vertices[i,0]
+    ypti = vertices[i,1]
+    xpts.append( ad( xpti, N=num_in_vec*dimensions, 
+                    dim=i, of_scalars=True) )
+    ypts.append( ad( ypti, N=num_in_vec*dimensions, 
+                    dim=i+num_in_vec, of_scalars=True) )
+    
+curve1 = spline.Bspline(vertices,order)
+curve1.plotcurve_detailed()
+precompute_curve_integrals()
+
+
+
+def fairness(curve, vertices=None):
+    """
+        Method to compute the non-weighted fairness 
+        functionals of a B-spline curve.
+
+    """        
+    if vertices is None:
+        xpts = curve.vertices[:,0]
+        ypts = curve.vertices[:,1]
+    else:
+        xpts = vertices[0]
+        ypts = vertices[1]
+    E1 = np.dot(np.dot(xpts,curve.M1),xpts)+np.dot(np.dot(ypts,curve.M1),ypts)
+    E2 = np.dot(np.dot(xpts,curve.M2),xpts)+np.dot(np.dot(ypts,curve.M2),ypts)
+    E3 = np.dot(np.dot(xpts,curve.M3),xpts)+np.dot(np.dot(ypts,curve.M3),ypts)
+
+    return E1,E2,E3
+
+e1,e2,e3 = fairness(curve1, [xpts,ypts])
+
+print curve1.E1
+print curve1.E2
+print curve1.E3
+
+print e1
+print e2
+print e3
+
+ADILS = rsp.ADILS
+Lagrangian, IntervalLagrangeSpline = ADILS.Lagrangian, ADILS.IntervalLagrangeSpline
+FormParameter = rsp.FormParameter  
+FormParameterDict, generalized_aattractor = FormParameter.FormParameterDict, FormParameter.generalized_aattractor
+
+initialValues  =  rsp.initialValues     
+InitializeControlPoints, InitializeControlVertices, \
+                                  interval_bounds, lagrangian_bounds = initialValues.InitializeControlPoints, initialValues.InitializeControlVertices, \
+                                  initialValues.interval_bounds, initialValues.lagrangian_bounds
+                                  
+
+
+FPD = FormParameterDict(curve1) 
+FPD.add_E1(kind='LS', weight = 1.)
+FPD.add_E2(kind='LS', weight = .5)
+FPD.add_E3(kind='LS', weight = .5)
+FPD.add_ArcLengthApprox(kind='LS', weight = 1.)
+FPD.add_AngleConstraint(kind='equality', location = 0., value = 0.)#AF.fuzzyNumber(-5.,-2.,0.))#
+FPD.add_AngleConstraint(kind='equality', location = 1., value = 0.)
+FPD.add_CurvatureConstraint(kind='equality', location = 0., value = 0.)
+FPD.add_CurvatureConstraint(kind='equality', location = 1., value = 0.)
+
+
+L = Lagrangian(FPD)
+Lspline = IntervalLagrangeSpline(curve1, L)
+
+vertices = Lspline.optimize()
+
+Lspline.curve.plotcurve_detailed()

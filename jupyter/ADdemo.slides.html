@@ -13804,7 +13804,7 @@ test hessian
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f1e32200210&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fccabf58210&gt;</pre>
 </div>
 
 </div>
@@ -14123,6 +14123,26 @@ In general, we can compute tangents along the curve, arc length, centroids (usin
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fcca6408bd0&gt;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -14452,18 +14472,21 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Answer:--Compile-mathmatical-expressions-into-syntax-trees">Answer:  Compile mathmatical expressions into syntax trees<a class="anchor-link" href="#Answer:--Compile-mathmatical-expressions-into-syntax-trees">&#182;</a></h2><p>Use operator overloading to build relational math terms.</p>
+<h2 id="Answer:--Compile-mathmatical-expressions-into-syntax-trees">Answer:  Compile mathmatical expressions into syntax trees<a class="anchor-link" href="#Answer:--Compile-mathmatical-expressions-into-syntax-trees">&#182;</a></h2><p>Use operator overloading to build a tree of relational terms from a mathmatical expression.</p>
 <ul>
-<li>Store the ternary elements of a computation</li>
-<li>And the operation used to combine two of them into the other</li>
-<li>Overloading handles parsing of n-ary 
-mathematical terms into ternary constraints.</li>
-<li>Then we methodically convert those 
-ternary constraints into
-binary logical rules perform unification on them.</li>
+<li>Operator overloading handles parsing of n-ary 
+ mathematical terms into ternary constraints.</li>
+<li>The overloading class must Store <ul>
+<li>the ternary elements of a computation</li>
+<li>Also store the operation used to combine two of them into the other</li>
 </ul>
-<p>Data can then flow freely through our constraints.
-And across them.</p>
+</li>
+<li>Then we methodically convert those 
+ ternary constraints into
+ binary logical rules and perform unification on them.</li>
+<li>We keep track of what terms are used in what rules.</li>
+</ul>
+<p>Data can then flow freely between our terms and across rules</p>
 <p>This is constraint logic programming.</p>
 
 </div>
@@ -14586,7 +14609,9 @@ And across them.</p>
 <ul>
 <li>Iterate over the design space one variable at a time</li>
 <li>Pick a number from the feasible domain at random</li>
-<li>Use constraint propagation to update all the other design variables with the new data.</li>
+<li>Use constraint propagation to update all the other design variables with the new data.
+<br>
+(This eliminates swaths of the design space each time)</li>
 <li>Once a single design is determined, do form parameter design.</li>
 </ul>
 
@@ -14600,7 +14625,7 @@ And across them.</p>
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14608,7 +14633,7 @@ And across them.</p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14664,19 +14689,6 @@ And across them.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div></div></section></section>
 </div>
 </div>

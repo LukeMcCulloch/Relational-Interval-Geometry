@@ -38,7 +38,7 @@ Also to help me formulate better presentations.  We will see how it goes!
 --SlidesExporter.reveal_transition=none
 
 
-### How to host on github pages
+### How to host on github pages (haven't tested this yet)
 
  * First clone reveal.js repo to your directory containing the notebook to add it as a submodule.
 

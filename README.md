@@ -39,3 +39,20 @@ Also to help me formulate better presentations.  We will see how it goes!
 
 
 ### How to host on github pages
+
+ * First clone reveal.js repo to your directory containing the notebook to add it as a submodule.
+
+git submodule add https://github.com/hakimel/reveal.js.git reveal.js
+
+ * Rename your notebook to index.ipynb because the nbconvert command creates a html file with the notebook name and we want to create the index.html file for our site to host on github pages.
+ * Run the script in the terminal to generate index.slides.html file.
+
+jupyter nbconvert --to slides index.ipynb --reveal-prefix=reveal.js 
+
+ * Since I’ve added my configuration parameters I’ve used the following :
+
+jupyter nbconvert --to slides index.ipynb --reveal-prefix=reveal.js --SlidesExporter.reveal_theme=serif 
+--SlidesExporter.reveal_scroll=True 
+--SlidesExporter.reveal_transition=none
+
+ * Push them to github in a new repo and make that repository a github pages site. Easiest way to do it is to just go to settings → Github pages section → select master as source → save.

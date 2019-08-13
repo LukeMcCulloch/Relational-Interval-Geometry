@@ -23,6 +23,10 @@ Also to help me formulate better presentations.  We will see how it goes!
     *  The idea is to break out your interpreter and have fun!
     *  Isn't that always the idea??
   
+
+## Building slides and hosting on github pages
+[From here](https://medium.com/learning-machine-learning/present-your-data-science-projects-with-jupyter-slides-75f20735eb0f)
+
 ### How to build slides of a jupyter notebook
  * convert the jupyter notebook to slides:
   
@@ -32,3 +36,6 @@ Also to help me formulate better presentations.  We will see how it goes!
 --SlidesExporter.reveal_theme=serif 
 --SlidesExporter.reveal_scroll=True 
 --SlidesExporter.reveal_transition=none
+
+
+### How to host on github pages

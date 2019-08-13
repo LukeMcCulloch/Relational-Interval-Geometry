@@ -23,3 +23,12 @@ Also to help me formulate better presentations.  We will see how it goes!
     *  The idea is to break out your interpreter and have fun!
     *  Isn't that always the idea??
   
+### How to build slides of a jupyter notebook
+ * convert the jupyter notebook to slides:
+  
+   jupyter nbconvert *.ipynb --to slides --post serve
+
+ * jupyter nbconvert ADdemo.ipynb --to slides --post serve 
+--SlidesExporter.reveal_theme=serif 
+--SlidesExporter.reveal_scroll=True 
+--SlidesExporter.reveal_transition=none

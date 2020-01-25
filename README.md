@@ -11,13 +11,22 @@ So what is neat about them?  They...
 7. The solver is able to narrow the design space down to individual self-consistent design parameter vectors.
 8. This is what is needed to ensure that the nonlinear solver, mentioned just below, will be successfull in 
 solving for the nice looking geometry.
+9. TODO: insert pictures here!  (Interval space paving, code transformation, etc..)
 
 # Neat stuff, on the automatic differentiation, nonlinear shape optimization front:
 2. There is an automatic differentiation implementation of a nonlinear constraint solver based on Lagrange's method of multiplies.
 3. This is coupled with an AD variables representation of B-spline control points
 4. There is also a full B-spline library so that any quantity of a B-spline curve or surface can be automatically 
 differentiated.
-5.  The code uses this to automatically generate the systems of equations needed for Lagrange multiplier based optimization.
+5. The code uses this to automatically generate the systems of equations needed for Lagrange multiplier based optimization.
+6. Once the solve is complete, the geometry meets the constraints exactly and is smooth according to some energy norms.
+7. TODO: insert pictures here!  (ship shapes)
+
+
+# Neat stuff, on the multiresolution modeling portion:
+1. The solver above is nice, but we would also like to vary detail locally, without needlessly adding control points elsewhere.
+2. The code uses the truncated hierarchical basis splines to make this work.
+3. TODO: insert pictures here!  (the elegant THB basis, or maybe some local shape detail)
 
 Also to help me formulate better presentations.  We will see how it goes!
 

@@ -13,6 +13,9 @@ So what is neat about them?  They...
 solving for the nice looking geometry.
 9. TODO: insert pictures here!  (Interval space paving, code transformation, etc..)
 
+# So an constraint on the length, width, and height of the hull form ensures that the hull will never exceed those bounds.
+!()[jupyter/fig/Cb_def.png]
+
 # Neat stuff, on the automatic differentiation, nonlinear shape optimization front:
 2. There is an automatic differentiation implementation of a nonlinear constraint solver based on Lagrange's method of multiplies.
 3. This is coupled with an AD variables representation of B-spline control points

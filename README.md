@@ -1,5 +1,24 @@
 # Relational-Interval-Geometry
-Simple demos to show users how to use the PhD code components, and what is neat about them.  
+So what is neat about them?  They...
+
+# Neat stuff, on the declarative design front:
+1. They use declarative constraint programming to generate complex ship hull geometry from a design specification.
+2. Numerical constraints are parsed into expression trees and compiled into declarative relational constaints.
+3. A network of constraints is automatically built based on freely modified mathematical relations between design variables
+4. Interval arithmetic is used to process constraints on the entire design space at once
+5. An constraints become interval valued relations between design space parameters.
+6. Constraint propagation narrows the design space to the feasible domain based on the latest design choices.
+7. The solver is able to narrow the design space down to individual self-consistent design parameter vectors.
+8. This is what is needed to ensure that the nonlinear solver, mentioned just below, will be successfull in 
+solving for the nice looking geometry.
+
+# Neat stuff, on the automatic differentiation, nonlinear shape optimization front:
+2. There is an automatic differentiation implementation of a nonlinear constraint solver based on Lagrange's method of multiplies.
+3. This is coupled with an AD variables representation of B-spline control points
+4. There is also a full B-spline library so that any quantity of a B-spline curve or surface can be automatically 
+differentiated.
+5.  The code uses this to automatically generate the systems of equations needed for Lagrange multiplier based optimization.
+
 Also to help me formulate better presentations.  We will see how it goes!
 
 

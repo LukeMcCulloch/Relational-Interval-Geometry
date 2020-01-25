@@ -13,7 +13,12 @@ So what is neat about them?  They...
 solving for the nice looking geometry.
 9. TODO: insert pictures here!  (Interval space paving, code transformation, etc..)
 
-# So an constraint on the length, width, and height of the hull form ensures that the hull will never exceed those bounds.
+# So a constraint on the length, width, and height of the hull form ensures that the hull will never exceed those bounds.
+1. It will be processed into a syntax tree:
+![](jupyter/fig/syntax_tree.png)
+2. Then compiled into declarative constriant language
+3. And constraint propagation over the interval valued design space will eliminate design subspaces which violate the constraint.
+4. In the end your ship hull satisfies this (and many many more) constraints:
 ![](jupyter/fig/Cb_def.png)
 
 # Neat stuff, on the automatic differentiation, nonlinear shape optimization front:

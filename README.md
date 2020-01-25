@@ -24,6 +24,8 @@ differentiated.
 
 ![](jupyter/fig/FPD/cagd15curvedefBig.png)
 
+# Actual ship hulls look something like this:
+![](jupyter/fig/TLMhull5_3.png)
 
 # Neat stuff, on the multiresolution modeling portion:
 1. The solver above is nice, but we would also like to vary detail locally, without needlessly adding control points elsewhere.

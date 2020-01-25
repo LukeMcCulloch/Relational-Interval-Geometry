@@ -19,7 +19,7 @@ solving for the nice looking geometry.
 2. Then compiled into declarative constriant language
 3. And constraint propagation over the interval valued design space will eliminate design subspaces which violate the constraint.
 4. In the end your ship hull satisfies this and more constraints which form a network
-![](jupyter/fig/ConstraintGraphs/)
+![](jupyter/fig/ConstraintGraphs.png/)
 5. And many more constraints bsides.  Finally there is a constraint conforming ship hull.
 ![](jupyter/fig/Cb_def.png)
 

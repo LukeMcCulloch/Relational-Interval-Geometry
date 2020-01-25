@@ -22,6 +22,8 @@ differentiated.
 6. Once the solve is complete, the geometry meets the constraints exactly and is smooth according to some energy norms.
 7. TODO: insert pictures here!  (ship shapes)
 
+![](jupyter/fig/FPD/cagd15curvedefBig.png)
+
 
 # Neat stuff, on the multiresolution modeling portion:
 1. The solver above is nice, but we would also like to vary detail locally, without needlessly adding control points elsewhere.

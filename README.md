@@ -23,6 +23,8 @@ solving for the nice looking geometry.
 5. And many more constraints bsides.  Finally there is a constraint conforming ship hull.
 ![](jupyter/fig/Cb_def.png)
 
+(This picture above is an actual result of the program, design generated from an input vector, randomly selected from portions of the design space deamed feasible by the constraint solver.  Another example is given below.)
+
 # Neat stuff, on the automatic differentiation, nonlinear shape optimization front:
 2. There is an automatic differentiation implementation of a nonlinear constraint solver based on Lagrange's method of multiplies.
 3. This is coupled with an AD variables representation of B-spline control points
@@ -36,6 +38,9 @@ differentiated.
 
 # Actual ship hulls look something like this:
 ![](jupyter/fig/TLMhull5_3.png)
+
+
+(This picture above is an actual result of the program, design generated from an input vector, randomly selected from portions of the design space deamed feasible by the constraint solver.  As you can see we are looking up at the ship hull from down below it.)
 
 # Neat stuff, on the multiresolution modeling portion:
 1. The solver above is nice, but we would also like to vary detail locally, without needlessly adding control points elsewhere.

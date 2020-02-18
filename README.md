@@ -1,5 +1,5 @@
 # Relational-Interval-Geometry
-So what is neat about them?  They...
+Let's itemize what might be interesting or neat about the [code](https://github.com/LukeMcCulloch/feasible-form-parameter-design) I'm demoing here:
 
 # Neat stuff, on the declarative design front:
 1. They use declarative constraint programming to generate complex ship hull geometry from a design specification.
